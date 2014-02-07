@@ -1,16 +1,22 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="zh_CN" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="zh_CN">
 <defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Bitcoin</source>
-        <translation>关于比特币</translation>
+        <source>About riecoin</source>
+        <translation type="unfinished">关于比特币</translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;riecoin&lt;/b&gt; version</source>
+        <translation type="obsolete">&lt;b&gt;比特币&lt;/b&gt;版本</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Bitcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;比特币&lt;/b&gt;版本</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Riecoin&lt;/span&gt; version&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+57"/>
@@ -34,8 +40,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+0"/>
-        <source>The Bitcoin developers</source>
-        <translation>Bitcoin-qt 客户端开发团队</translation>
+        <source>The riecoin developers</source>
+        <translation>riecoin-qt 客户端开发团队</translation>
     </message>
 </context>
 <context>
@@ -61,14 +67,19 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>复制当前选中地址到系统剪贴板</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="+25"/>
+        <source>Sign a message to prove you own a riecoin address</source>
+        <translation type="unfinished">签名消息，证明这个地址属于您。</translation>
+    </message>
+    <message>
+        <location line="-36"/>
         <source>&amp;New Address</source>
         <translation>&amp;新建地址</translation>
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your Bitcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>这是您用来收款的比特币地址。为了标记不同的资金来源，建议为每个付款人保留不同的收款地址。</translation>
+        <source>These are your riecoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation type="unfinished">这是您用来收款的比特币地址。为了标记不同的资金来源，建议为每个付款人保留不同的收款地址。</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -81,17 +92,17 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>显示二维码</translation>
     </message>
     <message>
-        <location line="+11"/>
-        <source>Sign a message to prove you own a Bitcoin address</source>
-        <translation>签名消息，证明这个地址属于您。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>Sign &amp;Message</source>
         <translation>对消息签名</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+11"/>
+        <source>Verify a message to ensure it was signed with a specified riecoin address</source>
+        <translation type="unfinished">验证消息，确保消息是由指定的比特币地址签名过的。</translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Delete the currently selected address from the list</source>
         <translation>从列表中删除选中的地址</translation>
     </message>
@@ -106,12 +117,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;导出</translation>
     </message>
     <message>
-        <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified Bitcoin address</source>
-        <translation>验证消息，确保消息是由指定的比特币地址签名过的。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="-41"/>
         <source>&amp;Verify Message</source>
         <translation>&amp;验证消息</translation>
     </message>
@@ -122,8 +128,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>这是您用来付款的比特币地址。在付款前，请总是核实付款金额和收款地址。</translation>
+        <source>These are your riecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">这是您用来付款的比特币地址。在付款前，请总是核实付款金额和收款地址。</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -248,8 +254,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>警告：如果您加密了您的钱包，但是忘记了密码，你将会&lt;b&gt;丢失所有的比特币&lt;/b&gt;！</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RIECOINS&lt;/b&gt;!</source>
+        <translation type="unfinished">警告：如果您加密了您的钱包，但是忘记了密码，你将会&lt;b&gt;丢失所有的比特币&lt;/b&gt;！</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -257,7 +263,12 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>您确定需要为钱包加密吗？</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+11"/>
+        <source>riecoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your riecoins from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">将关闭软件以完成加密过程。 请您谨记：钱包加密并不是万能的，电脑中毒，您的比特币还是有可能丢失。</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
         <translation>重要提示：您以前备份的钱包文件应该替换成最新生成的加密钱包文件（重新备份）。从安全性上考虑，您以前备份的未加密的钱包文件，在您使用新的加密钱包后将无效，请重新备份。</translation>
     </message>
@@ -274,12 +285,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>钱包已加密</translation>
     </message>
     <message>
-        <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>将关闭软件以完成加密过程。 请您谨记：钱包加密并不是万能的，电脑中毒，您的比特币还是有可能丢失。</translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="-43"/>
         <location line="+7"/>
         <location line="+42"/>
         <location line="+6"/>
@@ -323,316 +329,329 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+233"/>
-        <source>Sign &amp;message...</source>
-        <translation>对&amp;消息签名...</translation>
+        <location filename="../bitcoin.cpp" line="+111"/>
+        <source>A fatal error occurred. riecoin can no longer continue safely and will quit.</source>
+        <translation type="unfinished">发生严重错误。</translation>
     </message>
     <message>
-        <location line="+280"/>
-        <source>Synchronizing with network...</source>
-        <translation>正在与网络同步...</translation>
-    </message>
-    <message>
-        <location line="-349"/>
-        <source>&amp;Overview</source>
-        <translation>&amp;概况</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Show general overview of wallet</source>
-        <translation>显示钱包概况</translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>&amp;Transactions</source>
-        <translation>&amp;交易记录</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Browse transaction history</source>
-        <translation>查看交易历史</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Edit the list of stored addresses and labels</source>
-        <translation>修改存储的地址和标签列表</translation>
-    </message>
-    <message>
-        <location line="-14"/>
-        <source>Show the list of addresses for receiving payments</source>
-        <translation>显示接收支付的地址列表</translation>
-    </message>
-    <message>
-        <location line="+31"/>
-        <source>E&amp;xit</source>
-        <translation>退出</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Quit application</source>
-        <translation>退出程序</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Show information about Bitcoin</source>
-        <translation>显示比特币的相关信息</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>About &amp;Qt</source>
-        <translation>关于 &amp;Qt</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Show information about Qt</source>
-        <translation>显示Qt相关信息</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>&amp;Options...</source>
-        <translation>&amp;选项...</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>&amp;Encrypt Wallet...</source>
-        <translation>&amp;加密钱包...</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Backup Wallet...</source>
-        <translation>&amp;备份钱包...</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>&amp;Change Passphrase...</source>
-        <translation>&amp;修改密码...</translation>
-    </message>
-    <message>
-        <location line="+285"/>
-        <source>Importing blocks from disk...</source>
-        <translation>正在从磁盘导入数据块...</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Reindexing blocks on disk...</source>
-        <translation>正在为数据块建立索引...</translation>
-    </message>
-    <message>
-        <location line="-347"/>
-        <source>Send coins to a Bitcoin address</source>
-        <translation>向一个比特币地址发送比特币</translation>
-    </message>
-    <message>
-        <location line="+49"/>
-        <source>Modify configuration options for Bitcoin</source>
-        <translation>设置选项</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Backup wallet to another location</source>
-        <translation>备份钱包到其它文件夹</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Change the passphrase used for wallet encryption</source>
-        <translation>修改钱包加密口令</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>&amp;Debug window</source>
-        <translation>&amp;调试窗口</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Open debugging and diagnostic console</source>
-        <translation>在诊断控制台调试</translation>
-    </message>
-    <message>
-        <location line="-4"/>
-        <source>&amp;Verify message...</source>
-        <translation>&amp;验证消息...</translation>
-    </message>
-    <message>
-        <location line="-165"/>
+        <location filename="../bitcoingui.cpp" line="+70"/>
         <location line="+530"/>
-        <source>Bitcoin</source>
-        <translation>比特币</translation>
+        <source>riecoin</source>
+        <translation type="unfinished">比特币</translation>
     </message>
     <message>
         <location line="-530"/>
         <source>Wallet</source>
-        <translation>钱包</translation>
+        <translation type="unfinished">钱包</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+94"/>
+        <source>&amp;Overview</source>
+        <translation type="unfinished">&amp;概况</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show general overview of wallet</source>
+        <translation type="unfinished">显示钱包概况</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>&amp;Send</source>
-        <translation>&amp;发送</translation>
+        <translation type="unfinished">&amp;发送</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+1"/>
+        <source>Send coins to a riecoin address</source>
+        <translation type="unfinished">向一个比特币地址发送比特币</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>&amp;Receive</source>
-        <translation>&amp;接收</translation>
+        <translation type="unfinished">&amp;接收</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+1"/>
+        <source>Show the list of addresses for receiving payments</source>
+        <translation type="unfinished">显示接收支付的地址列表</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&amp;Transactions</source>
+        <translation type="unfinished">&amp;交易记录</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Browse transaction history</source>
+        <translation type="unfinished">查看交易历史</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>&amp;Addresses</source>
-        <translation>&amp;地址</translation>
+        <translation type="unfinished">&amp;地址</translation>
     </message>
     <message>
-        <location line="+22"/>
-        <source>&amp;About Bitcoin</source>
-        <translation>&amp;关于比特币</translation>
+        <location line="+1"/>
+        <source>Edit the list of stored addresses and labels</source>
+        <translation type="unfinished">修改存储的地址和标签列表</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+17"/>
+        <source>E&amp;xit</source>
+        <translation type="unfinished">退出</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Quit application</source>
+        <translation type="unfinished">退出程序</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;About riecoin</source>
+        <translation type="unfinished">&amp;关于比特币</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show information about riecoin</source>
+        <translation type="unfinished">显示比特币的相关信息</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>About &amp;Qt</source>
+        <translation type="unfinished">关于 &amp;Qt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show information about Qt</source>
+        <translation type="unfinished">显示Qt相关信息</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Options...</source>
+        <translation type="unfinished">&amp;选项...</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Modify configuration options for riecoin</source>
+        <translation type="unfinished">设置选项</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>&amp;Show / Hide</source>
-        <translation>&amp;显示 / 隐藏</translation>
+        <translation type="unfinished">&amp;显示 / 隐藏</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show or hide the main Window</source>
-        <translation>显示或隐藏主窗口</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Encrypt the private keys that belong to your wallet</source>
-        <translation>对钱包中的私钥加密</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation>用比特币地址关联的私钥为消息签名，以证明您拥有这个比特币地址</translation>
+        <translation type="unfinished">显示或隐藏主窗口</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>校验消息，确保该消息是由指定的比特币地址所有者签名的</translation>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation type="unfinished">&amp;加密钱包...</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+1"/>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation type="unfinished">对钱包中的私钥加密</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Backup Wallet...</source>
+        <translation type="unfinished">&amp;备份钱包...</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Backup wallet to another location</source>
+        <translation type="unfinished">备份钱包到其它文件夹</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Change Passphrase...</source>
+        <translation type="unfinished">&amp;修改密码...</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation type="unfinished">修改钱包加密口令</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sign &amp;message...</source>
+        <translation type="unfinished">对&amp;消息签名...</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sign messages with your riecoin addresses to prove you own them</source>
+        <translation type="unfinished">用比特币地址关联的私钥为消息签名，以证明您拥有这个比特币地址</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Verify message...</source>
+        <translation type="unfinished">&amp;验证消息...</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Verify messages to ensure they were signed with specified riecoin addresses</source>
+        <translation type="unfinished">校验消息，确保该消息是由指定的比特币地址所有者签名的</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Debug window</source>
+        <translation type="unfinished">&amp;调试窗口</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Open debugging and diagnostic console</source>
+        <translation type="unfinished">在诊断控制台调试</translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>&amp;File</source>
-        <translation>&amp;文件</translation>
+        <translation type="unfinished">&amp;文件</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Settings</source>
-        <translation>&amp;设置</translation>
+        <translation type="unfinished">&amp;设置</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Help</source>
-        <translation>&amp;帮助</translation>
+        <translation type="unfinished">&amp;帮助</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Tabs toolbar</source>
-        <translation>分页工具栏</translation>
+        <translation type="unfinished">分页工具栏</translation>
     </message>
     <message>
         <location line="+17"/>
         <location line="+10"/>
         <source>[testnet]</source>
-        <translation>[testnet]</translation>
+        <translation type="unfinished">[testnet]</translation>
     </message>
     <message>
         <location line="+47"/>
-        <source>Bitcoin client</source>
-        <translation>比特币客户端</translation>
+        <source>riecoin client</source>
+        <translation type="unfinished">比特币客户端</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to Bitcoin network</source>
-        <translation><numerusform>到比特币网络的连接共有%n条</numerusform></translation>
+        <source>%n active connection(s) to riecoin network</source>
+        <translation type="unfinished">
+            <numerusform>到比特币网络的连接共有%n条</numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+12"/>
+        <source>Synchronizing with network...</source>
+        <translation type="unfinished">正在与网络同步...</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Importing blocks from disk...</source>
+        <translation type="unfinished">正在从磁盘导入数据块...</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Reindexing blocks on disk...</source>
+        <translation type="unfinished">正在为数据块建立索引...</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>No block source available...</source>
-        <translation>No block source available...</translation>
+        <translation type="unfinished">No block source available...</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Processed %1 of %2 (estimated) blocks of transaction history.</source>
-        <translation>%1 / %2 个交易历史的区块已下载</translation>
+        <translation type="unfinished">%1 / %2 个交易历史的区块已下载</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Processed %1 blocks of transaction history.</source>
-        <translation>已处理 %1 个交易历史数据块。</translation>
+        <translation type="unfinished">已处理 %1 个交易历史数据块。</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Up to date</source>
+        <translation type="unfinished">最新状态</translation>
     </message>
     <message numerus="yes">
-        <location line="+20"/>
+        <location line="+14"/>
         <source>%n hour(s)</source>
-        <translation><numerusform>%n 小时前</numerusform></translation>
+        <translation type="unfinished">
+            <numerusform>%n 小时前</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n day(s)</source>
-        <translation><numerusform>%n 天前</numerusform></translation>
+        <translation type="unfinished">
+            <numerusform>%n 天前</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n week(s)</source>
-        <translation><numerusform>%n 周前</numerusform></translation>
+        <translation type="unfinished">
+            <numerusform>%n 周前</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 behind</source>
-        <translation>落后 %1 </translation>
+        <translation type="unfinished">落后 %1 </translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+5"/>
+        <source>Catching up...</source>
+        <translation type="unfinished">更新中...</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Last received block was generated %1 ago.</source>
-        <translation>最新收到的区块产生于 %1。</translation>
+        <translation type="unfinished">最新收到的区块产生于 %1。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Transactions after this will not yet be visible.</source>
-        <translation>在此之后的交易尚未可见</translation>
+        <translation type="unfinished">在此之后的交易尚未可见</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Error</source>
-        <translation>错误</translation>
+        <translation type="unfinished">错误</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Warning</source>
-        <translation>警告</translation>
+        <translation type="unfinished">警告</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Information</source>
-        <translation>信息</translation>
+        <translation type="unfinished">信息</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
-        <translation>该交易的字节数超标。您可以选择支付%1的交易费给处理您的交易的网络节点，有助于比特币网络的运行。您愿意支付这笔交易费用吗？</translation>
+        <translation type="unfinished">该交易的字节数超标。您可以选择支付%1的交易费给处理您的交易的网络节点，有助于比特币网络的运行。您愿意支付这笔交易费用吗？</translation>
     </message>
     <message>
-        <location line="-140"/>
-        <source>Up to date</source>
-        <translation>最新状态</translation>
-    </message>
-    <message>
-        <location line="+31"/>
-        <source>Catching up...</source>
-        <translation>更新中...</translation>
-    </message>
-    <message>
-        <location line="+113"/>
+        <location line="+4"/>
         <source>Confirm transaction fee</source>
-        <translation>确认交易费</translation>
+        <translation type="unfinished">确认交易费</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Sent transaction</source>
-        <translation>已发送交易</translation>
+        <translation type="unfinished">已发送交易</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Incoming transaction</source>
-        <translation>流入交易</translation>
+        <translation type="unfinished">流入交易</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -641,7 +660,7 @@ Amount: %2
 Type: %3
 Address: %4
 </source>
-        <translation>日期: %1
+        <translation type="unfinished">日期: %1
 金额: %2
 类别: %3
 地址: %4
@@ -651,28 +670,23 @@ Address: %4
         <location line="+33"/>
         <location line="+23"/>
         <source>URI handling</source>
-        <translation>URI 处理</translation>
+        <translation type="unfinished">URI 处理</translation>
     </message>
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation>URI无法解析！原因可能是比特币地址不正确，或者URI参数错误。</translation>
+        <source>URI can not be parsed! This can be caused by an invalid riecoin address or malformed URI parameters.</source>
+        <translation type="unfinished">URI无法解析！原因可能是比特币地址不正确，或者URI参数错误。</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>钱包已被&lt;b&gt;加密&lt;/b&gt;，当前为&lt;b&gt;解锁&lt;/b&gt;状态</translation>
+        <translation type="unfinished">钱包已被&lt;b&gt;加密&lt;/b&gt;，当前为&lt;b&gt;解锁&lt;/b&gt;状态</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>钱包已被&lt;b&gt;加密&lt;/b&gt;，当前为&lt;b&gt;锁定&lt;/b&gt;状态</translation>
-    </message>
-    <message>
-        <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
-        <translation>发生严重错误。</translation>
+        <translation type="unfinished">钱包已被&lt;b&gt;加密&lt;/b&gt;，当前为&lt;b&gt;锁定&lt;/b&gt;状态</translation>
     </message>
 </context>
 <context>
@@ -731,17 +745,17 @@ Address: %4
         <translation>编辑发送地址</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+71"/>
+        <source>The entered address &quot;%1&quot; is not a valid riecoin address.</source>
+        <translation type="unfinished">您输入的 &quot;%1&quot; 不是合法的比特币地址.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
         <translation>输入的地址 &quot;%1&quot; 已经存在于地址簿。</translation>
     </message>
     <message>
-        <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Bitcoin address.</source>
-        <translation>您输入的 &quot;%1&quot; 不是合法的比特币地址.</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+5"/>
         <source>Could not unlock wallet.</source>
         <translation>无法解锁钱包</translation>
     </message>
@@ -756,8 +770,8 @@ Address: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>Bitcoin-Qt</source>
-        <translation>Bitcoin-Qt</translation>
+        <source>riecoin-Qt</source>
+        <translation type="unfinished">riecoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -811,7 +825,7 @@ Address: %4
     <message>
         <location line="+6"/>
         <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+15"/>
@@ -820,13 +834,13 @@ Address: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Bitcoin after logging in to the system.</source>
-        <translation>登录系统后自动开启比特币客户端</translation>
+        <source>Automatically start riecoin after logging in to the system.</source>
+        <translation type="unfinished">登录系统后自动开启比特币客户端</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Bitcoin on system login</source>
-        <translation>启动时&amp;运行</translation>
+        <source>&amp;Start riecoin on system login</source>
+        <translation type="unfinished">启动时&amp;运行</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -845,8 +859,8 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>自动在路由器中打开比特币端口。只有当您的路由器开启 UPnP 选项时此功能才有效。</translation>
+        <source>Automatically open the riecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation type="unfinished">自动在路由器中打开比特币端口。只有当您的路由器开启 UPnP 选项时此功能才有效。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -855,8 +869,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Bitcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>通过代理服务器连接比特币网络(例如：通过Tor连接)</translation>
+        <source>Connect to the riecoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation type="unfinished">通过代理服务器连接比特币网络(例如：通过Tor连接)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -930,11 +944,16 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin.</source>
-        <translation>在这里设置用户界面的语言。设置将在客户端重启后生效。</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting riecoin.</source>
+        <translation type="unfinished">在这里设置用户界面的语言。设置将在客户端重启后生效。</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+33"/>
+        <source>Whether to show riecoin addresses in the transaction list or not.</source>
+        <translation type="unfinished">是否需要在交易清单中显示比特币地址。</translation>
+    </message>
+    <message>
+        <location line="-22"/>
         <source>&amp;Unit to show amounts in:</source>
         <translation>&amp;比特币金额单位:</translation>
     </message>
@@ -944,12 +963,7 @@ Address: %4
         <translation>选择比特币单位。</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>Whether to show Bitcoin addresses in the transaction list or not.</source>
-        <translation>是否需要在交易清单中显示比特币地址。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="+12"/>
         <source>&amp;Display addresses in transaction list</source>
         <translation>在交易清单中&amp;显示比特币地址</translation>
     </message>
@@ -997,8 +1011,8 @@ Address: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Bitcoin.</source>
-        <translation>需要重启客户端软件才能生效。</translation>
+        <source>This setting will take effect after restarting riecoin.</source>
+        <translation type="unfinished">需要重启客户端软件才能生效。</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1016,8 +1030,8 @@ Address: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>现在显示的消息可能是过期的. 在连接上比特币网络节点后，您的钱包将自动与网络同步，但是这个过程还没有完成.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the riecoin network after a connection is established, but this process has not completed yet.</source>
+        <translation type="unfinished">现在显示的消息可能是过期的. 在连接上比特币网络节点后，您的钱包将自动与网络同步，但是这个过程还没有完成.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1070,7 +1084,7 @@ Address: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start riecoin: click-to-pay handler</source>
         <translation>暂时无法启动比特币：点击支付功能</translation>
     </message>
 </context>
@@ -1164,7 +1178,17 @@ Address: %4
         <translation>&amp;信息</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="-10"/>
+        <source>riecoin - Debug window</source>
+        <translation type="unfinished">比特币 - 调试窗口</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Riecoin Core&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+53"/>
         <source>Using OpenSSL version</source>
         <translation>使用OpenSSL版本</translation>
     </message>
@@ -1209,7 +1233,12 @@ Address: %4
         <translation>上一数据块时间</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+49"/>
+        <source>Open the riecoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation type="unfinished">打开当前目录中的调试日志文件。日志文件大的话可能要等上几秒钟。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>&amp;Open</source>
         <translation>&amp;打开</translation>
     </message>
@@ -1220,8 +1249,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Bitcoin-Qt help message to get a list with possible Bitcoin command-line options.</source>
-        <translation>显示Bitcoin命令行选项帮助信息</translation>
+        <source>Show the riecoin-Qt help message to get a list with possible riecoin command-line options.</source>
+        <translation type="unfinished">显示riecoin命令行选项帮助信息</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1239,34 +1268,23 @@ Address: %4
         <translation>创建时间</translation>
     </message>
     <message>
-        <location line="-104"/>
-        <source>Bitcoin - Debug window</source>
-        <translation>比特币 - 调试窗口</translation>
+        <source>riecoin Core</source>
+        <translation type="obsolete">比特币核心</translation>
     </message>
     <message>
-        <location line="+25"/>
-        <source>Bitcoin Core</source>
-        <translation>比特币核心</translation>
-    </message>
-    <message>
-        <location line="+279"/>
+        <location line="+200"/>
         <source>Debug log file</source>
         <translation>调试日志文件</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Open the Bitcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>打开当前目录中的调试日志文件。日志文件大的话可能要等上几秒钟。</translation>
-    </message>
-    <message>
-        <location line="+102"/>
+        <location line="+109"/>
         <source>Clear console</source>
         <translation>清空控制台</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Bitcoin RPC console.</source>
-        <translation>欢迎来到 RPC 控制台.</translation>
+        <source>Welcome to the riecoin RPC console.</source>
+        <translation type="unfinished">欢迎来到 RPC 控制台.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1320,8 +1338,12 @@ Address: %4
     </message>
     <message>
         <location line="+10"/>
+        <source>123.456 RIC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>123.456 BTC</source>
-        <translation>123.456 BTC</translation>
+        <translation type="obsolete">123.456 BTC</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1448,9 +1470,13 @@ Address: %4
         <translation>移除此接收者</translation>
     </message>
     <message>
+        <source>Enter a riecoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation type="obsolete">请输入比特币地址 (例如: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+    </message>
+    <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>请输入比特币地址 (例如: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a riecoin address)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1514,11 +1540,16 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Bitcoin address</source>
-        <translation>签名消息，证明这个地址属于您。</translation>
+        <source>Sign the message to prove you own this riecoin address</source>
+        <translation type="unfinished">签名消息，证明这个地址属于您。</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+146"/>
+        <source>Verify the message to ensure it was signed with the specified riecoin address</source>
+        <translation type="unfinished">验证消息，确保消息是由指定的比特币地址签名过的。</translation>
+    </message>
+    <message>
+        <location line="-143"/>
         <source>Sign &amp;Message</source>
         <translation>消息签名</translation>
     </message>
@@ -1549,12 +1580,7 @@ Address: %4
         <translation>用于签名消息的地址(例如: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
-        <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation>验证消息，确保消息是由指定的比特币地址签名过的。</translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="+43"/>
         <source>Verify &amp;Message</source>
         <translation>验证消息签名</translation>
     </message>
@@ -1564,23 +1590,27 @@ Address: %4
         <translation>清空所有验证消息栏</translation>
     </message>
     <message>
-        <location filename="../signverifymessagedialog.cpp" line="+27"/>
-        <location line="+3"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>请输入比特币地址 (例如: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a riecoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation type="obsolete">请输入比特币地址 (例如: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location filename="../signverifymessagedialog.cpp" line="+28"/>
         <source>Click &quot;Sign Message&quot; to generate signature</source>
         <translation>单击“签名消息“产生签名。</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Bitcoin signature</source>
-        <translation>输入比特币签名</translation>
+        <source>Enter riecoin signature</source>
+        <translation type="unfinished">输入比特币签名</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="-4"/>
+        <location line="+3"/>
+        <source>Enter a riecoin address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+83"/>
         <location line="+81"/>
         <source>The entered address is invalid.</source>
         <translation>输入的地址非法。</translation>
@@ -1649,9 +1679,13 @@ Address: %4
 <context>
     <name>SplashScreen</name>
     <message>
+        <source>The riecoin developers</source>
+        <translation type="obsolete">riecoin-qt 客户端开发团队</translation>
+    </message>
+    <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The Bitcoin developers</source>
-        <translation>Bitcoin-qt 客户端开发团队</translation>
+        <source>The Riecoin developers</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1689,7 +1723,9 @@ Address: %4
     <message numerus="yes">
         <location line="+7"/>
         <source>, broadcast through %n node(s)</source>
-        <translation><numerusform>通过 %n 个节点广播</numerusform></translation>
+        <translation>
+            <numerusform>通过 %n 个节点广播</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1742,7 +1778,9 @@ Address: %4
     <message numerus="yes">
         <location line="-102"/>
         <source>matures in %n more block(s)</source>
-        <translation><numerusform>将在 %n 个数据块后成熟</numerusform></translation>
+        <translation>
+            <numerusform>将在 %n 个数据块后成熟</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1825,7 +1863,9 @@ Address: %4
     <message numerus="yes">
         <location line="-35"/>
         <source>Open for %n more block(s)</source>
-        <translation><numerusform>Open for %n more block</numerusform></translation>
+        <translation>
+            <numerusform>Open for %n more block</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+70"/>
@@ -1871,7 +1911,9 @@ Address: %4
     <message numerus="yes">
         <location line="+57"/>
         <source>Open for %n more block(s)</source>
-        <translation><numerusform>Open for %n more block</numerusform></translation>
+        <translation>
+            <numerusform>Open for %n more block</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1896,7 +1938,9 @@ Address: %4
     <message numerus="yes">
         <location line="+8"/>
         <source>Mined balance will be available when it matures in %n more block(s)</source>
-        <translation><numerusform>挖矿收入余额将在 %n 个数据块后可用</numerusform></translation>
+        <translation>
+            <numerusform>挖矿收入余额将在 %n 个数据块后可用</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2146,7 +2190,7 @@ Address: %4
     <message>
         <location filename="../walletview.cpp" line="+42"/>
         <source>&amp;Export</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished">&amp;导出</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2185,11 +2229,302 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>bitcoingui</name>
+    <message>
+        <source>Sign &amp;message...</source>
+        <translation type="obsolete">对&amp;消息签名...</translation>
+    </message>
+    <message>
+        <source>Synchronizing with network...</source>
+        <translation type="obsolete">正在与网络同步...</translation>
+    </message>
+    <message>
+        <source>&amp;Overview</source>
+        <translation type="obsolete">&amp;概况</translation>
+    </message>
+    <message>
+        <source>Show general overview of wallet</source>
+        <translation type="obsolete">显示钱包概况</translation>
+    </message>
+    <message>
+        <source>&amp;Transactions</source>
+        <translation type="obsolete">&amp;交易记录</translation>
+    </message>
+    <message>
+        <source>Browse transaction history</source>
+        <translation type="obsolete">查看交易历史</translation>
+    </message>
+    <message>
+        <source>Edit the list of stored addresses and labels</source>
+        <translation type="obsolete">修改存储的地址和标签列表</translation>
+    </message>
+    <message>
+        <source>Show the list of addresses for receiving payments</source>
+        <translation type="obsolete">显示接收支付的地址列表</translation>
+    </message>
+    <message>
+        <source>E&amp;xit</source>
+        <translation type="obsolete">退出</translation>
+    </message>
+    <message>
+        <source>Quit application</source>
+        <translation type="obsolete">退出程序</translation>
+    </message>
+    <message>
+        <source>Show information about riecoin</source>
+        <translation type="obsolete">显示比特币的相关信息</translation>
+    </message>
+    <message>
+        <source>About &amp;Qt</source>
+        <translation type="obsolete">关于 &amp;Qt</translation>
+    </message>
+    <message>
+        <source>Show information about Qt</source>
+        <translation type="obsolete">显示Qt相关信息</translation>
+    </message>
+    <message>
+        <source>&amp;Options...</source>
+        <translation type="obsolete">&amp;选项...</translation>
+    </message>
+    <message>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation type="obsolete">&amp;加密钱包...</translation>
+    </message>
+    <message>
+        <source>&amp;Backup Wallet...</source>
+        <translation type="obsolete">&amp;备份钱包...</translation>
+    </message>
+    <message>
+        <source>&amp;Change Passphrase...</source>
+        <translation type="obsolete">&amp;修改密码...</translation>
+    </message>
+    <message>
+        <source>Importing blocks from disk...</source>
+        <translation type="obsolete">正在从磁盘导入数据块...</translation>
+    </message>
+    <message>
+        <source>Reindexing blocks on disk...</source>
+        <translation type="obsolete">正在为数据块建立索引...</translation>
+    </message>
+    <message>
+        <source>Send coins to a riecoin address</source>
+        <translation type="obsolete">向一个比特币地址发送比特币</translation>
+    </message>
+    <message>
+        <source>Modify configuration options for riecoin</source>
+        <translation type="obsolete">设置选项</translation>
+    </message>
+    <message>
+        <source>Backup wallet to another location</source>
+        <translation type="obsolete">备份钱包到其它文件夹</translation>
+    </message>
+    <message>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation type="obsolete">修改钱包加密口令</translation>
+    </message>
+    <message>
+        <source>&amp;Debug window</source>
+        <translation type="obsolete">&amp;调试窗口</translation>
+    </message>
+    <message>
+        <source>Open debugging and diagnostic console</source>
+        <translation type="obsolete">在诊断控制台调试</translation>
+    </message>
+    <message>
+        <source>&amp;Verify message...</source>
+        <translation type="obsolete">&amp;验证消息...</translation>
+    </message>
+    <message>
+        <source>riecoin</source>
+        <translation type="obsolete">比特币</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation type="obsolete">钱包</translation>
+    </message>
+    <message>
+        <source>&amp;Send</source>
+        <translation type="obsolete">&amp;发送</translation>
+    </message>
+    <message>
+        <source>&amp;Receive</source>
+        <translation type="obsolete">&amp;接收</translation>
+    </message>
+    <message>
+        <source>&amp;Addresses</source>
+        <translation type="obsolete">&amp;地址</translation>
+    </message>
+    <message>
+        <source>&amp;About riecoin</source>
+        <translation type="obsolete">&amp;关于比特币</translation>
+    </message>
+    <message>
+        <source>&amp;Show / Hide</source>
+        <translation type="obsolete">&amp;显示 / 隐藏</translation>
+    </message>
+    <message>
+        <source>Show or hide the main Window</source>
+        <translation type="obsolete">显示或隐藏主窗口</translation>
+    </message>
+    <message>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation type="obsolete">对钱包中的私钥加密</translation>
+    </message>
+    <message>
+        <source>Sign messages with your riecoin addresses to prove you own them</source>
+        <translation type="obsolete">用比特币地址关联的私钥为消息签名，以证明您拥有这个比特币地址</translation>
+    </message>
+    <message>
+        <source>Verify messages to ensure they were signed with specified riecoin addresses</source>
+        <translation type="obsolete">校验消息，确保该消息是由指定的比特币地址所有者签名的</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation type="obsolete">&amp;文件</translation>
+    </message>
+    <message>
+        <source>&amp;Settings</source>
+        <translation type="obsolete">&amp;设置</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation type="obsolete">&amp;帮助</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation type="obsolete">分页工具栏</translation>
+    </message>
+    <message>
+        <source>[testnet]</source>
+        <translation type="obsolete">[testnet]</translation>
+    </message>
+    <message>
+        <source>riecoin client</source>
+        <translation type="obsolete">比特币客户端</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n active connection(s) to riecoin network</source>
+        <translation type="obsolete">
+            <numerusform>到比特币网络的连接共有%n条</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>No block source available...</source>
+        <translation type="obsolete">No block source available...</translation>
+    </message>
+    <message>
+        <source>Processed %1 of %2 (estimated) blocks of transaction history.</source>
+        <translation type="obsolete">%1 / %2 个交易历史的区块已下载</translation>
+    </message>
+    <message>
+        <source>Processed %1 blocks of transaction history.</source>
+        <translation type="obsolete">已处理 %1 个交易历史数据块。</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n hour(s)</source>
+        <translation type="obsolete">
+            <numerusform>%n 小时前</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>%n day(s)</source>
+        <translation type="obsolete">
+            <numerusform>%n 天前</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>%n week(s)</source>
+        <translation type="obsolete">
+            <numerusform>%n 周前</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>%1 behind</source>
+        <translation type="obsolete">落后 %1 </translation>
+    </message>
+    <message>
+        <source>Last received block was generated %1 ago.</source>
+        <translation type="obsolete">最新收到的区块产生于 %1。</translation>
+    </message>
+    <message>
+        <source>Transactions after this will not yet be visible.</source>
+        <translation type="obsolete">在此之后的交易尚未可见</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="obsolete">错误</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation type="obsolete">警告</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation type="obsolete">信息</translation>
+    </message>
+    <message>
+        <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
+        <translation type="obsolete">该交易的字节数超标。您可以选择支付%1的交易费给处理您的交易的网络节点，有助于比特币网络的运行。您愿意支付这笔交易费用吗？</translation>
+    </message>
+    <message>
+        <source>Up to date</source>
+        <translation type="obsolete">最新状态</translation>
+    </message>
+    <message>
+        <source>Catching up...</source>
+        <translation type="obsolete">更新中...</translation>
+    </message>
+    <message>
+        <source>Confirm transaction fee</source>
+        <translation type="obsolete">确认交易费</translation>
+    </message>
+    <message>
+        <source>Sent transaction</source>
+        <translation type="obsolete">已发送交易</translation>
+    </message>
+    <message>
+        <source>Incoming transaction</source>
+        <translation type="obsolete">流入交易</translation>
+    </message>
+    <message>
+        <source>Date: %1
+Amount: %2
+Type: %3
+Address: %4
+</source>
+        <translation type="obsolete">日期: %1
+金额: %2
+类别: %3
+地址: %4
+</translation>
+    </message>
+    <message>
+        <source>URI handling</source>
+        <translation type="obsolete">URI 处理</translation>
+    </message>
+    <message>
+        <source>URI can not be parsed! This can be caused by an invalid riecoin address or malformed URI parameters.</source>
+        <translation type="obsolete">URI无法解析！原因可能是比特币地址不正确，或者URI参数错误。</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation type="obsolete">钱包已被&lt;b&gt;加密&lt;/b&gt;，当前为&lt;b&gt;解锁&lt;/b&gt;状态</translation>
+    </message>
+    <message>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation type="obsolete">钱包已被&lt;b&gt;加密&lt;/b&gt;，当前为&lt;b&gt;锁定&lt;/b&gt;状态</translation>
+    </message>
+    <message>
+        <source>A fatal error occurred. riecoin can no longer continue safely and will quit.</source>
+        <translation type="obsolete">发生严重错误。</translation>
+    </message>
+</context>
+<context>
+    <name>riecoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>Bitcoin version</source>
-        <translation>比特币版本</translation>
+        <source>riecoin version</source>
+        <translation type="unfinished">比特币版本</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2198,8 +2533,8 @@ Address: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>发送命令到服务器或者 bitcoind
+        <source>Send command to -server or riecoind</source>
+        <translation type="unfinished">发送命令到服务器或者 riecoind
 </translation>
     </message>
     <message>
@@ -2222,14 +2557,14 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>指定配置文件 (默认为 bitcoin.conf)
+        <source>Specify configuration file (default: riecoin.conf)</source>
+        <translation type="unfinished">指定配置文件 (默认为 riecoin.conf)
 </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>指定 pid 文件 (默认为 bitcoind.pid)
+        <source>Specify pid file (default: riecoind.pid)</source>
+        <translation type="unfinished">指定 pid 文件 (默认为 riecoind.pid)
 </translation>
     </message>
     <message>
@@ -2312,24 +2647,24 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=riecoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;riecoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, 您必须在配置文件设置rpcpassword:
  %s
 建议您使用下面的随机密码:
-rpcuser=bitcoinrpc
+rpcuser=riecoinrpc
 rpcpassword=%s
 (您无需记住此密码)
 用户名和密码 必! 须! 不一样。
 如果配置文件不存在，请自行建立一个只有所有者拥有只读权限的文件。
 推荐您开启提示通知以便收到错误通知，
-像这样: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com
+像这样: alertnotify=echo %%s | mail -s &quot;riecoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2344,8 +2679,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin is probably already running.</source>
-        <translation>无法给数据目录 %s上锁。本软件可能已经在运行。</translation>
+        <source>Cannot obtain a lock on data directory %s. riecoin is probably already running.</source>
+        <translation type="unfinished">无法给数据目录 %s上锁。本软件可能已经在运行。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2389,8 +2724,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Bitcoin will not work properly.</source>
-        <translation>警告：请检查电脑的日期时间设置是否正确！时间错误可能会导致比特币客户端运行异常。</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong riecoin will not work properly.</source>
+        <translation type="unfinished">警告：请检查电脑的日期时间设置是否正确！时间错误可能会导致比特币客户端运行异常。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2530,7 +2865,7 @@ rpcpassword=%s
     <message>
         <location line="+1"/>
         <source>Generate coins (default: 0)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2545,7 +2880,7 @@ rpcpassword=%s
     <message>
         <location line="+19"/>
         <source>Not enough file descriptors available.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2575,10 +2910,20 @@ rpcpassword=%s
     <message>
         <location line="-76"/>
         <source>Set the number of script verification threads (up to 16, 0 = auto, &lt;0 = leave that many cores free, default: 0)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+6"/>
+        <source>Unable to bind to %s on this computer. riecoin is probably already running.</source>
+        <translation type="unfinished">无法在本机绑定 %s 端口 . 比特币客户端软件可能已经在运行.</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Error loading wallet.dat: Wallet requires newer version of riecoin</source>
+        <translation type="unfinished">wallet.dat钱包文件加载错误：请升级到最新riecoin客户端</translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Information</source>
         <translation>信息</translation>
     </message>
@@ -2590,12 +2935,12 @@ rpcpassword=%s
     <message>
         <location line="+1"/>
         <source>Invalid amount for -minrelaytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Invalid amount for -mintxfee=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2639,8 +2984,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>SSL选项：(参见Bitcoin Wiki关于SSL设置栏目)</translation>
+        <source>SSL options: (see the riecoin Wiki for SSL setup instructions)</source>
+        <translation>SSL选项：(参见riecoin Wiki关于SSL设置栏目)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2675,7 +3020,7 @@ rpcpassword=%s
     <message>
         <location line="+1"/>
         <source>Signing transaction failed</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2690,17 +3035,17 @@ rpcpassword=%s
     <message>
         <location line="+4"/>
         <source>Transaction amount too small</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Transaction amounts must be positive</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Transaction too large</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2724,7 +3069,12 @@ rpcpassword=%s
 </translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
+        <source>Wallet needed to be rewritten: restart riecoin to complete</source>
+        <translation type="unfinished">钱包文件需要重写：请退出并重新启动riecoin客户端</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>
@@ -2838,17 +3188,7 @@ rpcpassword=%s
         <translation>wallet.dat钱包文件加载错误：钱包损坏</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin</source>
-        <translation>wallet.dat钱包文件加载错误：请升级到最新Bitcoin客户端</translation>
-    </message>
-    <message>
-        <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart Bitcoin to complete</source>
-        <translation>钱包文件需要重写：请退出并重新启动Bitcoin客户端</translation>
-    </message>
-    <message>
-        <location line="-95"/>
+        <location line="-1"/>
         <source>Error loading wallet.dat</source>
         <translation>wallet.dat钱包文件加载错误</translation>
     </message>
@@ -2903,12 +3243,7 @@ rpcpassword=%s
         <translation>添加节点并与其保持连接</translation>
     </message>
     <message>
-        <location line="-25"/>
-        <source>Unable to bind to %s on this computer. Bitcoin is probably already running.</source>
-        <translation>无法在本机绑定 %s 端口 . 比特币客户端软件可能已经在运行.</translation>
-    </message>
-    <message>
-        <location line="+64"/>
+        <location line="+39"/>
         <source>Fee per KB to add to transactions you send</source>
         <translation>每发送1KB交易所需的费用</translation>
     </message>

@@ -23,6 +23,12 @@ class CWalletTx;
 class CReserveKey;
 class COutput;
 
+enum PortNumbers
+{
+    PORT_NR_RPC = 28332,
+    PORT_NR_RPC_TESTNET = 38332
+};
+
 /** (client) version numbers for particular wallet features */
 enum WalletFeature
 {
@@ -373,8 +379,8 @@ public:
     mapValue_t mapValue;
     std::vector<std::pair<std::string, std::string> > vOrderForm;
     unsigned int fTimeReceivedIsTxTime;
-    unsigned int nTimeReceived;  // time received by this node
-    unsigned int nTimeSmart;
+    int64 nTimeReceived;  // time received by this node
+    int64 nTimeSmart;
     char fFromMe;
     std::string strFromAccount;
     std::vector<char> vfSpent; // which outputs are already spent
@@ -460,7 +466,7 @@ public:
             WriteOrderPos(pthis->nOrderPos, pthis->mapValue);
 
             if (nTimeSmart)
-                pthis->mapValue["timesmart"] = strprintf("%u", nTimeSmart);
+                pthis->mapValue["timesmart"] = strprintf("%"PRI64u, nTimeSmart);
         }
 
         nSerSize += SerReadWrite(s, *(CMerkleTx*)this, nType, nVersion,ser_action);
@@ -484,7 +490,7 @@ public:
 
             ReadOrderPos(pthis->nOrderPos, pthis->mapValue);
 
-            pthis->nTimeSmart = mapValue.count("timesmart") ? (unsigned int)atoi64(pthis->mapValue["timesmart"]) : 0;
+            pthis->nTimeSmart = mapValue.count("timesmart") ? atoi64(pthis->mapValue["timesmart"]) : 0;
         }
 
         pthis->mapValue.erase("fromaccount");

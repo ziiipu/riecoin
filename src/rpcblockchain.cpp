@@ -18,28 +18,26 @@ double GetDifficulty(const CBlockIndex* blockindex)
     if (blockindex == NULL)
     {
         if (pindexBest == NULL)
-            return 1.0;
+            return iMinPrimeSize;
         else
             blockindex = pindexBest;
     }
-
     int nShift = (blockindex->nBits >> 24) & 0xff;
 
-    double dDiff =
-        (double)0x0000ffff / (double)(blockindex->nBits & 0x00ffffff);
+    double dDiff = (double)(blockindex->nBits & 0x00ffffff);
 
-    while (nShift < 29)
+    while (nShift > 3)
     {
         dDiff *= 256.0;
-        nShift++;
-    }
-    while (nShift > 29)
-    {
-        dDiff /= 256.0;
         nShift--;
     }
+    while (nShift < 3)
+    {
+        dDiff /= 256.0;
+        nShift++;
+    }
 
-    return dDiff;
+    return dDiff / iMinPrimeSize;
 }
 
 
@@ -59,9 +57,9 @@ Object blockToJSON(const CBlock& block, const CBlockIndex* blockindex)
         txs.push_back(tx.GetHash().GetHex());
     result.push_back(Pair("tx", txs));
     result.push_back(Pair("time", (boost::int64_t)block.GetBlockTime()));
-    result.push_back(Pair("nonce", (boost::uint64_t)block.nNonce));
+    result.push_back(Pair("nOffset",block.nOffset.GetHex()));
     result.push_back(Pair("bits", HexBits(block.nBits)));
-    result.push_back(Pair("difficulty", GetDifficulty(blockindex)));
+    result.push_back(Pair("difficulty", (int)GetDifficulty(blockindex)));
 
     if (blockindex->pprev)
         result.push_back(Pair("previousblockhash", blockindex->pprev->GetBlockHash().GetHex()));
@@ -89,7 +87,7 @@ Value getdifficulty(const Array& params, bool fHelp)
             "getdifficulty\n"
             "Returns the proof-of-work difficulty as a multiple of the minimum difficulty.");
 
-    return GetDifficulty();
+    return (int)GetDifficulty();
 }
 
 
