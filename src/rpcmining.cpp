@@ -91,7 +91,7 @@ Value getwork(const Array& params, bool fHelp)
             "getwork [data]\n"
             "If [data] is not specified, returns formatted hash data to work on:\n"
             "  \"data\" : block data\n"
-            "  \"diff\" : size of prime in bits (difficulty)\n"
+            "  \"diff\" : size of primes in bits (difficulty)\n"
             "  \"primes\" : number of primes required (constellation size)\n"
             "If [data] is specified, tries to solve the block and returns true if it was successful.");
 

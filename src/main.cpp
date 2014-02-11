@@ -1150,21 +1150,178 @@ CBigNum nthRoot( CBigNum const & n, int root, CBigNum const & lowerBound )
 
 bitsType static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
-	// this is a stub, the complete function will be published at launch/release time
-	assert( 0 );
+    // Genesis block
+    if (pindexLast == NULL)
+        return MinPrimeSize.GetCompact();
+
+    // Only change once per interval
+    if ( (pindexLast->nHeight+1) % nInterval != 0 )
+    {
+        // Special difficulty rule for testnet:
+        if (fTestNet)
+        {
+            // If the new block's timestamp is more than 2* 10 minutes
+            // then allow mining of a min-difficulty block.
+            if (pblock->nTime > pindexLast->nTime + nTargetSpacing*2)
+                return MinPrimeSize.GetCompact();
+            else
+            {
+                // Return the last non-special-min-difficulty-rules-block
+                const CBlockIndex* pindex = pindexLast;
+                while (pindex->pprev && (pindex->nHeight % nInterval) != 0 && pindex->nBits == MinPrimeSize)
+                    pindex = pindex->pprev;
+                return pindex->nBits;
+            }
+        }
+
+        return pindexLast->nBits;
+    }
+
+    // Go back by what we want to be nTargetTimespan worth of blocks
+    const CBlockIndex* pindexFirst = pindexLast;
+    int i = 0;
+    if( pindexLast->nHeight+1 == nInterval ) // do not include genesis block
+        i++;
+    for( ; pindexFirst && i < nInterval-1; i++)
+        pindexFirst = pindexFirst->pprev;
+
+    // Limit adjustment step
+    int64 nActualTimespan = pindexLast->GetBlockTime() - pindexFirst->GetBlockTime();
+    printf("  nActualTimespan = %"PRI64d"  before bounds\n", nActualTimespan);
+    if( pindexLast->nHeight+1 >= nInterval * 2) // do not apply limit for first retargets: adjust faster to avoid instamining
+    {
+      if (nActualTimespan < nTargetTimespan/4)
+          nActualTimespan = nTargetTimespan/4;
+      if (nActualTimespan > nTargetTimespan*4)
+          nActualTimespan = nTargetTimespan*4;
+    }
+
+    // Retarget
+    CBigNum bnNew;
+    CBigNum bnNewPow;
+    bnNew.SetCompact( pindexLast->nBits );
+    // 9th power (3+constellationSize)
+    bnNewPow = pindexLast->GetBlockWork();
+
+    bnNewPow *= nTargetTimespan;
+    bnNewPow /= nActualTimespan;
+    bnNew = nthRoot( bnNewPow, 3+constellationSize, bnNew / 2 );
+
+    if (bnNew < MinPrimeSize)
+        bnNew = MinPrimeSize;
+    else if( bnNew > (unsigned long long)-1 )
+        bnNew = (unsigned long long)-1;
+
+    /// debug print
+    printf("GetNextWorkRequired RETARGET: ");
+    printf("nTargetTimespan = %"PRI64d" nActualTimespan = %"PRI64d"\n", nTargetTimespan, nActualTimespan);
+    printf("Before: %08x  %s\n", pindexLast->nBits, CBigNum().SetCompact(pindexLast->nBits).ToString().c_str());
+    printf("After:  %08x  %s\n", bnNew.GetCompact(), bnNew.ToString().c_str());
+
+    return bnNew.GetCompact();
 }
 
 unsigned int generatePrimeBase( CBigNum &bnTarget, uint256 hash, bitsType compactBits )
 {
-	// this is a stub, the complete function will be published at launch/release time
-	assert( 0 );
+    bnTarget = 1;
+    bnTarget <<= zeroesBeforeHashInPrime;
+
+    for ( int i = 0; i < 256; i++ )
+    {
+        bnTarget = (bnTarget << 1) + (hash.Get32() & 1);
+        hash >>= 1;
+    }
+    CBigNum nBits;
+    nBits.SetCompact(compactBits);
+    if( nBits > nBits.getuint() ) // the protocol stores a compact big int so it supports larger values, but this version of the client does not
+    {
+        nBits = (unsigned int)-1; // saturate diff at (2**32) - 1, this should be enough for some years ;)
+    }
+    unsigned int trailingZeros = nBits.getuint() - 1 - zeroesBeforeHashInPrime - 256;
+    bnTarget <<= trailingZeros;
+    return trailingZeros;
 }
 
 
 bool CheckProofOfWork(uint256 hash, bitsType compactBits, uint256 delta)
 {
-	// this is a stub, the complete function will be published at launch/release time
-	assert( 0 );
+    if( hash == hashGenesisBlockForPoW )
+        return true;
+    CBigNum bnTarget;
+    unsigned int trailingZeros = generatePrimeBase( bnTarget, hash, compactBits );
+
+    if (trailingZeros < 256)
+    {
+        uint256 deltaLimit = 1;
+        deltaLimit <<= trailingZeros;
+        if( delta >= deltaLimit )
+            return error("CheckProofOfWork() : candidate larger than allowed");
+    }
+
+    CBigNum bigDelta = CBigNum(delta);
+    bnTarget += bigDelta;
+
+    if( (bnTarget % 210) != 97 )
+        return error("CheckProofOfWork() : not valid pow");
+
+    // first we do a single test to quickly discard most of the bogus cases
+    if( BN_is_prime_fasttest( &bnTarget, 2, NULL, NULL, NULL, 1) != 1 )
+    {
+        //printf("CheckProofOfWork fail  hash: %s  \ntarget: %d nOffset: %s\n", hash2.GetHex().c_str(), nBits, delta.GetHex().c_str());
+        //printf("CheckProofOfWork fail  target: %s  \n", bnTarget.GetHex().c_str());
+        return error("CheckProofOfWork() : n not prime");
+    }
+    bnTarget += 4;
+    if( BN_is_prime_fasttest( &bnTarget, 2, NULL, NULL, NULL, 1) != 1 )
+    {
+        return error("CheckProofOfWork() : n+4 not prime");
+    }
+    bnTarget += 2;
+    if( BN_is_prime_fasttest( &bnTarget, 2, NULL, NULL, NULL, 1) != 1 )
+    {
+        return error("CheckProofOfWork() : n+6 not prime");
+    }
+    bnTarget += 4;
+    if( BN_is_prime_fasttest( &bnTarget, 2, NULL, NULL, NULL, 1) != 1 )
+    {
+        return error("CheckProofOfWork() : n+10 not prime");
+    }
+    bnTarget += 2;
+    if( BN_is_prime_fasttest( &bnTarget, 2, NULL, NULL, NULL, 1) != 1 )
+    {
+        return error("CheckProofOfWork() : n+12 not prime");
+    }
+    bnTarget += 4;
+    if( BN_is_prime_fasttest( &bnTarget, 16, NULL, NULL, NULL, 1) != 1 )
+    {
+        return error("CheckProofOfWork() : n+16 not prime");
+    }
+    bnTarget -= 4;
+    if( BN_is_prime_fasttest( &bnTarget, 14, NULL, NULL, NULL, 1) != 1 )
+    {
+        return error("CheckProofOfWork() : n+12 not prime");
+    }
+    bnTarget -= 2;
+    if( BN_is_prime_fasttest( &bnTarget, 14, NULL, NULL, NULL, 1) != 1 )
+    {
+        return error("CheckProofOfWork() : n+10 not prime");
+    }
+    bnTarget -= 4;
+    if( BN_is_prime_fasttest( &bnTarget, 14, NULL, NULL, NULL, 1) != 1 )
+    {
+        return error("CheckProofOfWork() : n+6 not prime");
+    }
+    bnTarget -= 2;
+    if( BN_is_prime_fasttest( &bnTarget, 14, NULL, NULL, NULL, 1) != 1 )
+    {
+        return error("CheckProofOfWork() : n+4 not prime");
+    }
+    bnTarget -= 4;
+    if( BN_is_prime_fasttest( &bnTarget, 14, NULL, NULL, NULL, 1) != 1 )
+    {
+        return error("CheckProofOfWork() : n not prime");
+    }
+    return true;
 }
 
 // Return maximum amount of blocks that other nodes claim to have
@@ -2707,7 +2864,7 @@ bool InitBlockIndex() {
         //   vMerkleTree: 4a5e1e
 
         // Genesis block
-        const char* pszTimestamp = "testnet! this will be updated";
+        const char* pszTimestamp = "The Times 10/Feb/2014 Thousands of bankers sacked since crisis";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -2719,12 +2876,12 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1375382507;
+        block.nTime    = 1392079741;
         block.nBits    = MinPrimeSize.GetCompact();
         block.nOffset   = 0;
         if (fTestNet)
         {
-            block.nTime    = 1375382508;
+            block.nTime    = 1392079740;
         }
 
         //// debug print
@@ -4010,6 +4167,104 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
 // RiecoinMiner
 //
 
+class CSieve
+{
+public:
+    static const int sieveSize = 1000000;
+
+private:
+
+    static const int largestPrimeInTable = 1000;
+
+    static std::vector<int> primeTable;
+    static bool primeTableInited;
+    char pSieve[sieveSize];
+    int _index;
+
+    static void InitPrimeTable( void )
+    {
+        if( primeTableInited )
+            return;
+        static CCriticalSection cs;
+        {
+            LOCK(cs);
+            if( primeTableInited )
+                return;
+            primeTableInited = true;
+            primeTable.push_back(2);
+            for( int i = 3; i <= largestPrimeInTable; i += 2 )
+            {
+                if( isPrime(i) )
+                    primeTable.push_back(i);
+            }
+        }
+    }
+    static bool isPrime( int candidate )
+    {
+        for( unsigned int i = 0; i < primeTable.size(); i++ )
+        {
+            const int prime = primeTable[i];
+            if( prime * prime > candidate )
+                return true;
+            if( (candidate % prime) == 0 )
+                return false;
+        }
+        return true;
+    }
+
+public:
+    void init( CBigNum const &base )
+    {
+        InitPrimeTable();
+        /*if( pSieve == NULL )
+        {
+            pSieve = (char *)malloc(sieveSize);
+        }*/
+        memset( pSieve, true, sieveSize );
+        for( unsigned int primeIndex = 0; primeIndex < primeTable.size(); primeIndex++ )
+        {
+            int prime = primeTable[primeIndex];
+            for( int sieveIndex = prime - (base % prime).getint(); sieveIndex < sieveSize; sieveIndex += prime )
+            {
+                pSieve[sieveIndex] = false;
+            }
+        }
+        _index = 4;
+    }
+    static void dumpPrimeTable( void )
+    {
+        InitPrimeTable();
+        for( unsigned int primeIndex = 0; primeIndex < primeTable.size(); primeIndex++ )
+        {
+            printf(" Prime %d: %d\n", primeIndex, primeTable[primeIndex]);
+        }
+    }
+
+    int getNext( void )
+    {
+        if( _index >= sieveSize - 16 )
+        {
+            return -1;
+        }
+        while( 1 )
+        {
+            _index++;
+            if( _index >= sieveSize - 16 )
+            {
+                return -1;
+            }
+            if( pSieve[_index] && pSieve[_index+4] &&
+                pSieve[_index+6] && pSieve[_index+10] &&
+                pSieve[_index+12] && pSieve[_index+16] )
+                return _index;
+        }
+    }
+
+};
+std::vector<int> CSieve::primeTable;
+bool CSieve::primeTableInited;
+
+
 
 static const unsigned int pSHA256InitState[8] =
 {0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a, 0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19};
@@ -4436,8 +4691,166 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
 
 void static riecoinMiner(CWallet *pwallet)
 {
-	// this is a stub, the complete function will be published at launch/release time
-	assert( 0 );
+    printf("riecoinMiner started!\n");
+    SetThreadPriority(THREAD_PRIORITY_LOWEST);
+    RenameThread("riecoin-miner");
+
+    // Each thread has its own key and counter
+    CReserveKey reservekey(pwallet);
+    unsigned int nExtraNonce = 0;
+    CSieve mySieve;
+    int previousDelta;
+    int candidateDelta = -1;
+
+    try {
+
+        loop {
+        while (vNodes.empty())
+            MilliSleep(1000);
+
+        //
+        // Create new block
+        //
+        unsigned int nTransactionsUpdatedLast = nTransactionsUpdated;
+        CBlockIndex* pindexPrev = pindexBest;
+
+        auto_ptr<CBlockTemplate> pblocktemplate(CreateNewBlock(reservekey));
+        if (!pblocktemplate.get())
+            return;
+        CBlock *pblock = &pblocktemplate->block;
+        IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
+
+        printf("Running riecoinMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
+               ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
+
+        //
+        // Search
+        //
+        int64 nStart = GetTime();
+
+        static int64 nHashCounter;
+        if (nHPSTimerStart == 0)
+        {
+            nHPSTimerStart = GetTimeMillis();
+            nHashCounter = 0;
+        }
+
+        uint256 blockHash2 = pblock->GetHashForPoW();
+        CBigNum bnTarget, bnBase;
+        generatePrimeBase( bnBase, blockHash2, pblock->nBits );
+
+        mySieve.init(bnBase);
+
+        candidateDelta = -1;
+        previousDelta = 0;
+        int64 accumulatedDelta = 0;
+
+        loop
+        {
+            int i, isPrimeResult = 0;
+            const int TRIES = 65536;
+
+            for ( i = 0; i < TRIES; i++ )
+            {
+                candidateDelta = mySieve.getNext();
+                if( candidateDelta < 0 )
+                    break;
+                bnTarget = bnBase + candidateDelta;
+                isPrimeResult = BN_is_prime_fasttest( &bnTarget, 4, NULL, NULL, NULL, 1);
+                if ( isPrimeResult == 1 )
+                {
+                    break;
+                }
+            }
+
+            // Check if something found
+            if ( candidateDelta >= 0 && i != TRIES)
+            {
+                bnTarget += 4;
+                if( BN_is_prime_fasttest( &bnTarget, 4, NULL, NULL, NULL, 1) == 1 ) {
+                bnTarget += 2;
+                if( BN_is_prime_fasttest( &bnTarget, 4, NULL, NULL, NULL, 1) == 1 ) {
+                bnTarget += 4;
+                if( BN_is_prime_fasttest( &bnTarget, 4, NULL, NULL, NULL, 1) == 1 ) {
+                    bnTarget += 2;
+                    if( BN_is_prime_fasttest( &bnTarget, 4, NULL, NULL, NULL, 1) == 1 ) {
+                        bnTarget += 4;
+                        if( BN_is_prime_fasttest( &bnTarget, 4, NULL, NULL, NULL, 1) == 1 )
+                        {
+                            // Found a solution
+                            pblock->nOffset = candidateDelta + accumulatedDelta;
+
+                            assert(blockHash2 == pblock->GetHashForPoW());
+
+                            SetThreadPriority(THREAD_PRIORITY_NORMAL);
+                            bool bIsValid = CheckWork(pblock, *pwalletMain, reservekey);
+                            SetThreadPriority(THREAD_PRIORITY_LOWEST);
+                            if( !bIsValid )
+                            {
+                                //printf("CheckWork from miner failed %d\n", isPrimeResult);
+                                printf("CheckWork fail  target: %s  \n", bnTarget.GetHex().c_str());
+                            }
+                            break;
+                        }
+                    }
+                } } }
+            }
+
+            // Meter range/sec
+            if( candidateDelta == -1 )
+            {
+                nHashCounter += mySieve.sieveSize - previousDelta;
+            }
+            else
+            {
+                nHashCounter += candidateDelta - previousDelta;
+                previousDelta = candidateDelta;
+            }
+            if (GetTimeMillis() - nHPSTimerStart > 4000)
+            {
+                static CCriticalSection cs;
+                {
+                    LOCK(cs);
+                    if (GetTimeMillis() - nHPSTimerStart > 4000)
+                    {
+                        dHashesPerSec = 1000.0 * nHashCounter / (GetTimeMillis() - nHPSTimerStart);
+                        nHPSTimerStart = GetTimeMillis();
+                        nHashCounter = 0;
+                        static int64 nLogTime;
+                        if (GetTime() - nLogTime > 30 * 60)
+                        {
+                            nLogTime = GetTime();
+                            printf("hashmeter %.0f N/s\n", dHashesPerSec);
+                        }
+                    }
+                }
+                break;
+            }
+
+            // Check for stop or if block needs to be rebuilt
+            boost::this_thread::interruption_point();
+            if (vNodes.empty())
+                break;
+            if (nTransactionsUpdated != nTransactionsUpdatedLast && GetTime() - nStart > 60)
+                break;
+            if (pindexPrev != pindexBest)
+                break;
+            if( candidateDelta < 0 )
+            {
+                bnBase += mySieve.sieveSize;
+                accumulatedDelta += mySieve.sieveSize;
+                mySieve.init(bnBase);
+
+                candidateDelta = -1;
+                previousDelta = 0;
+            }
+        } // end infinite loop
+    } }
+    catch (boost::thread_interrupted)
+    {
+        printf("riecoinMiner terminated\n");
+        throw;
+    }
 }
 
 void GenerateRiecoins(bool fGenerate, CWallet* pwallet)

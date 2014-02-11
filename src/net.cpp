@@ -1231,19 +1231,16 @@ void ThreadDNSAddressSeed()
 }
 
 
-
-
-
-
-
-
-
-
-
-
-unsigned int pnSeed[0] =
+unsigned int pnSeed[] =
 {
-   // 0xe473042e // to do pablo
+    // 192.0.0.0  =  0xc0000000
+    0xbfeb80ba, // 191.235.128.186
+    0x176315c8, // 23.99.21.200
+    0x43e1ac4d, // 67.225.172.77
+    0x6baa1abc, // 107.170.26.188
+    0xC690B475, //198.144.180.117
+    0xC690B476, //198.144.180.118
+    0x80C7FDE9 // 128.199.253.233
 };
 
 void DumpAddresses()
