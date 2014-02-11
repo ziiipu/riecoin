@@ -32,8 +32,8 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0xf93cd1f3344da4a12219a6d2c4cd714ba277b6c3bf4ed62a561e21105f0cf04c");
-uint256 hashGenesisBlockForPoW("0xb84cc4c1af7e6c2abb274c052a08462912064b6eb5f5e8d25ebfde569c64c1fc");
+uint256 hashGenesisBlock("0xe1ea18d0676ef9899fbc78ef428d1d26a2416d0f0441d46668d33bcb41275740");
+uint256 hashGenesisBlockForPoW("0x26d0466d5a0eab0ebf171eacb98146b26143d143463514f26b28d3cded81c1bb");
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 CBigNum bnBestChainWork = 0;
@@ -2830,8 +2830,8 @@ bool LoadBlockIndex()
         pchMessageStart[1] = 0x09;
         pchMessageStart[2] = 0x11;
         pchMessageStart[3] = 0x05;
-        hashGenesisBlock = uint256("0x669d036a3d3878454536523cef65782754467034f70c2ab2c4f760f7fbebd66e");
-        hashGenesisBlockForPoW = uint256("0x5ab2b98abe0533d70141517d0ef7d5c1ab7adc8263da4bf4ccd7cf2217645fe9");
+        hashGenesisBlock = uint256("0xaae37be1f387e263a6bb5063ff8f5e3d9e1ccad90ae5bba612f6cf4125918d49");
+        hashGenesisBlockForPoW = uint256("0x2083eb7025b63b89926b28b39733df1aad34daa456e5c5b59f582c90a29d652a");
     }
 
     //
@@ -2892,7 +2892,7 @@ bool InitBlockIndex() {
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
         printf("forPoW: %s\n", hashPoW.ToString().c_str());
         block.print();
-        assert(block.hashMerkleRoot == uint256("0xb8fcc5eedac458fe02b8797ceff6c7ba4c05f749ff464b6ebf775e0eab0afa6c"));
+        assert(block.hashMerkleRoot == uint256("0xd59afe19bb9e6126be90b2c8c18a8bee08c3c50ad3b3cca2b91c09683aa48118"));
         assert(hash == hashGenesisBlock);
         assert(hashPoW == hashGenesisBlockForPoW);
 
@@ -4691,7 +4691,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
 
 void static riecoinMiner(CWallet *pwallet)
 {
-    printf("riecoinMiner started!\n");
+    printf("riecoinMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
     RenameThread("riecoin-miner");
 
