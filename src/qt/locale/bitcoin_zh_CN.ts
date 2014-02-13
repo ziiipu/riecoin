@@ -7,11 +7,11 @@
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About riecoin</source>
-        <translation type="unfinished">关于比特币</translation>
+        <translation type="unfinished">关于黎曼币</translation>
     </message>
     <message>
         <source>&lt;b&gt;riecoin&lt;/b&gt; version</source>
-        <translation type="obsolete">&lt;b&gt;比特币&lt;/b&gt;版本</translation>
+        <translation type="obsolete">&lt;b&gt;黎曼币&lt;/b&gt;版本</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -79,7 +79,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
         <source>These are your riecoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation type="unfinished">这是您用来收款的比特币地址。为了标记不同的资金来源，建议为每个付款人保留不同的收款地址。</translation>
+        <translation type="unfinished">这是您用来收款的黎曼币地址。为了标记不同的资金来源，建议为每个付款人保留不同的收款地址。</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -99,7 +99,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+11"/>
         <source>Verify a message to ensure it was signed with a specified riecoin address</source>
-        <translation type="unfinished">验证消息，确保消息是由指定的比特币地址签名过的。</translation>
+        <translation type="unfinished">验证消息，确保消息是由指定的黎曼币地址签名过的。</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -129,7 +129,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
         <source>These are your riecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">这是您用来付款的比特币地址。在付款前，请总是核实付款金额和收款地址。</translation>
+        <translation type="unfinished">这是您用来付款的黎曼币地址。在付款前，请总是核实付款金额和收款地址。</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -255,7 +255,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RIECOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">警告：如果您加密了您的钱包，但是忘记了密码，你将会&lt;b&gt;丢失所有的比特币&lt;/b&gt;！</translation>
+        <translation type="unfinished">警告：如果您加密了您的钱包，但是忘记了密码，你将会&lt;b&gt;丢失所有的黎曼币&lt;/b&gt;！</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -265,7 +265,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+11"/>
         <source>riecoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your riecoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">将关闭软件以完成加密过程。 请您谨记：钱包加密并不是万能的，电脑中毒，您的比特币还是有可能丢失。</translation>
+        <translation type="unfinished">将关闭软件以完成加密过程。 请您谨记：钱包加密并不是万能的，电脑中毒，您的黎曼币还是有可能丢失。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -337,7 +337,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location filename="../bitcoingui.cpp" line="+70"/>
         <location line="+530"/>
         <source>riecoin</source>
-        <translation type="unfinished">比特币</translation>
+        <translation type="unfinished">黎曼币</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -362,7 +362,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Send coins to a riecoin address</source>
-        <translation type="unfinished">向一个比特币地址发送比特币</translation>
+        <translation type="unfinished">向一个黎曼币地址发送黎曼币</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -407,12 +407,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+3"/>
         <source>&amp;About riecoin</source>
-        <translation type="unfinished">&amp;关于比特币</translation>
+        <translation type="unfinished">&amp;关于黎曼币</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show information about riecoin</source>
-        <translation type="unfinished">显示比特币的相关信息</translation>
+        <translation type="unfinished">显示黎曼币的相关信息</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -482,7 +482,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Sign messages with your riecoin addresses to prove you own them</source>
-        <translation type="unfinished">用比特币地址关联的私钥为消息签名，以证明您拥有这个比特币地址</translation>
+        <translation type="unfinished">用黎曼币地址关联的私钥为消息签名，以证明您拥有这个黎曼币地址</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -492,7 +492,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Verify messages to ensure they were signed with specified riecoin addresses</source>
-        <translation type="unfinished">校验消息，确保该消息是由指定的比特币地址所有者签名的</translation>
+        <translation type="unfinished">校验消息，确保该消息是由指定的黎曼币地址所有者签名的</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -533,13 +533,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+47"/>
         <source>riecoin client</source>
-        <translation type="unfinished">比特币客户端</translation>
+        <translation type="unfinished">黎曼币客户端</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
         <source>%n active connection(s) to riecoin network</source>
         <translation type="unfinished">
-            <numerusform>到比特币网络的连接共有%n条</numerusform>
+            <numerusform>到黎曼币网络的连接共有%n条</numerusform>
         </translation>
     </message>
     <message>
@@ -636,7 +636,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+70"/>
         <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
-        <translation type="unfinished">该交易的字节数超标。您可以选择支付%1的交易费给处理您的交易的网络节点，有助于比特币网络的运行。您愿意支付这笔交易费用吗？</translation>
+        <translation type="unfinished">该交易的字节数超标。您可以选择支付%1的交易费给处理您的交易的网络节点，有助于黎曼币网络的运行。您愿意支付这笔交易费用吗？</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -676,7 +676,7 @@ Address: %4
         <location line="-23"/>
         <location line="+23"/>
         <source>URI can not be parsed! This can be caused by an invalid riecoin address or malformed URI parameters.</source>
-        <translation type="unfinished">URI无法解析！原因可能是比特币地址不正确，或者URI参数错误。</translation>
+        <translation type="unfinished">URI无法解析！原因可能是黎曼币地址不正确，或者URI参数错误。</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -747,7 +747,7 @@ Address: %4
     <message>
         <location line="+71"/>
         <source>The entered address &quot;%1&quot; is not a valid riecoin address.</source>
-        <translation type="unfinished">您输入的 &quot;%1&quot; 不是合法的比特币地址.</translation>
+        <translation type="unfinished">您输入的 &quot;%1&quot; 不是合法的黎曼币地址.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -835,7 +835,7 @@ Address: %4
     <message>
         <location line="+31"/>
         <source>Automatically start riecoin after logging in to the system.</source>
-        <translation type="unfinished">登录系统后自动开启比特币客户端</translation>
+        <translation type="unfinished">登录系统后自动开启黎曼币客户端</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -860,7 +860,7 @@ Address: %4
     <message>
         <location line="+6"/>
         <source>Automatically open the riecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="unfinished">自动在路由器中打开比特币端口。只有当您的路由器开启 UPnP 选项时此功能才有效。</translation>
+        <translation type="unfinished">自动在路由器中打开黎曼币端口。只有当您的路由器开启 UPnP 选项时此功能才有效。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -870,7 +870,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Connect to the riecoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation type="unfinished">通过代理服务器连接比特币网络(例如：通过Tor连接)</translation>
+        <translation type="unfinished">通过代理服务器连接黎曼币网络(例如：通过Tor连接)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -950,22 +950,22 @@ Address: %4
     <message>
         <location line="+33"/>
         <source>Whether to show riecoin addresses in the transaction list or not.</source>
-        <translation type="unfinished">是否需要在交易清单中显示比特币地址。</translation>
+        <translation type="unfinished">是否需要在交易清单中显示黎曼币地址。</translation>
     </message>
     <message>
         <location line="-22"/>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>&amp;比特币金额单位:</translation>
+        <translation>&amp;黎曼币金额单位:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>选择比特币单位。</translation>
+        <translation>选择黎曼币单位。</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>&amp;Display addresses in transaction list</source>
-        <translation>在交易清单中&amp;显示比特币地址</translation>
+        <translation>在交易清单中&amp;显示黎曼币地址</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -1031,7 +1031,7 @@ Address: %4
         <location line="+50"/>
         <location line="+166"/>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the riecoin network after a connection is established, but this process has not completed yet.</source>
-        <translation type="unfinished">现在显示的消息可能是过期的. 在连接上比特币网络节点后，您的钱包将自动与网络同步，但是这个过程还没有完成.</translation>
+        <translation type="unfinished">现在显示的消息可能是过期的. 在连接上黎曼币网络节点后，您的钱包将自动与网络同步，但是这个过程还没有完成.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1085,7 +1085,7 @@ Address: %4
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
         <source>Cannot start riecoin: click-to-pay handler</source>
-        <translation>暂时无法启动比特币：点击支付功能</translation>
+        <translation>暂时无法启动黎曼币：点击支付功能</translation>
     </message>
 </context>
 <context>
@@ -1180,7 +1180,7 @@ Address: %4
     <message>
         <location line="-10"/>
         <source>riecoin - Debug window</source>
-        <translation type="unfinished">比特币 - 调试窗口</translation>
+        <translation type="unfinished">黎曼币 - 调试窗口</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -1210,7 +1210,7 @@ Address: %4
     <message>
         <location line="+23"/>
         <source>On testnet</source>
-        <translation>当前为比特币测试网络</translation>
+        <translation>当前为黎曼币测试网络</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1269,7 +1269,7 @@ Address: %4
     </message>
     <message>
         <source>riecoin Core</source>
-        <translation type="obsolete">比特币核心</translation>
+        <translation type="obsolete">黎曼币核心</translation>
     </message>
     <message>
         <location line="+200"/>
@@ -1408,7 +1408,7 @@ Address: %4
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>错误: 交易被拒绝. 如果您使用的是备份钱包，可能存在两个钱包不同步的情况，另一个钱包中的比特币已经被使用，但本地的这个钱包尚没有记录。</translation>
+        <translation>错误: 交易被拒绝. 如果您使用的是备份钱包，可能存在两个钱包不同步的情况，另一个钱包中的黎曼币已经被使用，但本地的这个钱包尚没有记录。</translation>
     </message>
 </context>
 <context>
@@ -1430,8 +1430,8 @@ Address: %4
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>付款给这个地址  (例如 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>The address to send the payment to (e.g. RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</source>
+        <translation>付款给这个地址  (例如 RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1470,8 +1470,8 @@ Address: %4
         <translation>移除此接收者</translation>
     </message>
     <message>
-        <source>Enter a riecoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation type="obsolete">请输入比特币地址 (例如: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a riecoin address (e.g. RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</source>
+        <translation type="obsolete">请输入黎曼币地址 (例如: RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
@@ -1498,8 +1498,8 @@ Address: %4
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>用于签名消息的地址(例如: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>The address to sign the message with (e.g. RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</source>
+        <translation>用于签名消息的地址(例如: RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1546,7 +1546,7 @@ Address: %4
     <message>
         <location line="+146"/>
         <source>Verify the message to ensure it was signed with the specified riecoin address</source>
-        <translation type="unfinished">验证消息，确保消息是由指定的比特币地址签名过的。</translation>
+        <translation type="unfinished">验证消息，确保消息是由指定的黎曼币地址签名过的。</translation>
     </message>
     <message>
         <location line="-143"/>
@@ -1576,8 +1576,8 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>用于签名消息的地址(例如: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>The address the message was signed with (e.g. RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</source>
+        <translation>用于签名消息的地址(例如: RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -1590,8 +1590,8 @@ Address: %4
         <translation>清空所有验证消息栏</translation>
     </message>
     <message>
-        <source>Enter a riecoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation type="obsolete">请输入比特币地址 (例如: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a riecoin address (e.g. RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</source>
+        <translation type="obsolete">请输入黎曼币地址 (例如: RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</translation>
     </message>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+28"/>
@@ -1601,7 +1601,7 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>Enter riecoin signature</source>
-        <translation type="unfinished">输入比特币签名</translation>
+        <translation type="unfinished">输入黎曼币签名</translation>
     </message>
     <message>
         <location line="-4"/>
@@ -1823,7 +1823,7 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>新挖出的比特币必须等确120个确认才能使用。您生产出的数据块，将被广播到全网并添加到数据块链。如果入链失败，状态将变为“未被接受”，意味着您的数据块竞争失败，挖出的比特币将不能使用。当某个节点先于你几秒生产出新的数据块，这种情况会偶尔发生。</translation>
+        <translation>新挖出的黎曼币必须等确120个确认才能使用。您生产出的数据块，将被广播到全网并添加到数据块链。如果入链失败，状态将变为“未被接受”，意味着您的数据块竞争失败，挖出的黎曼币将不能使用。当某个节点先于你几秒生产出新的数据块，这种情况会偶尔发生。</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1990,7 +1990,7 @@ Address: %4
     <message>
         <location line="+2"/>
         <source>Date and time that the transaction was received.</source>
-        <translation>接收比特币的时间</translation>
+        <translation>接收黎曼币的时间</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2182,7 +2182,7 @@ Address: %4
     <message>
         <location filename="../walletmodel.cpp" line="+193"/>
         <source>Send Coins</source>
-        <translation>发送比特币</translation>
+        <translation>发送黎曼币</translation>
     </message>
 </context>
 <context>
@@ -2272,7 +2272,7 @@ Address: %4
     </message>
     <message>
         <source>Show information about riecoin</source>
-        <translation type="obsolete">显示比特币的相关信息</translation>
+        <translation type="obsolete">显示黎曼币的相关信息</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
@@ -2308,7 +2308,7 @@ Address: %4
     </message>
     <message>
         <source>Send coins to a riecoin address</source>
-        <translation type="obsolete">向一个比特币地址发送比特币</translation>
+        <translation type="obsolete">向一个黎曼币地址发送黎曼币</translation>
     </message>
     <message>
         <source>Modify configuration options for riecoin</source>
@@ -2336,7 +2336,7 @@ Address: %4
     </message>
     <message>
         <source>riecoin</source>
-        <translation type="obsolete">比特币</translation>
+        <translation type="obsolete">黎曼币</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2356,7 +2356,7 @@ Address: %4
     </message>
     <message>
         <source>&amp;About riecoin</source>
-        <translation type="obsolete">&amp;关于比特币</translation>
+        <translation type="obsolete">&amp;关于黎曼币</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -2372,11 +2372,11 @@ Address: %4
     </message>
     <message>
         <source>Sign messages with your riecoin addresses to prove you own them</source>
-        <translation type="obsolete">用比特币地址关联的私钥为消息签名，以证明您拥有这个比特币地址</translation>
+        <translation type="obsolete">用黎曼币地址关联的私钥为消息签名，以证明您拥有这个黎曼币地址</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified riecoin addresses</source>
-        <translation type="obsolete">校验消息，确保该消息是由指定的比特币地址所有者签名的</translation>
+        <translation type="obsolete">校验消息，确保该消息是由指定的黎曼币地址所有者签名的</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -2400,12 +2400,12 @@ Address: %4
     </message>
     <message>
         <source>riecoin client</source>
-        <translation type="obsolete">比特币客户端</translation>
+        <translation type="obsolete">黎曼币客户端</translation>
     </message>
     <message numerus="yes">
         <source>%n active connection(s) to riecoin network</source>
         <translation type="obsolete">
-            <numerusform>到比特币网络的连接共有%n条</numerusform>
+            <numerusform>到黎曼币网络的连接共有%n条</numerusform>
         </translation>
     </message>
     <message>
@@ -2464,7 +2464,7 @@ Address: %4
     </message>
     <message>
         <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
-        <translation type="obsolete">该交易的字节数超标。您可以选择支付%1的交易费给处理您的交易的网络节点，有助于比特币网络的运行。您愿意支付这笔交易费用吗？</translation>
+        <translation type="obsolete">该交易的字节数超标。您可以选择支付%1的交易费给处理您的交易的网络节点，有助于黎曼币网络的运行。您愿意支付这笔交易费用吗？</translation>
     </message>
     <message>
         <source>Up to date</source>
@@ -2504,7 +2504,7 @@ Address: %4
     </message>
     <message>
         <source>URI can not be parsed! This can be caused by an invalid riecoin address or malformed URI parameters.</source>
-        <translation type="obsolete">URI无法解析！原因可能是比特币地址不正确，或者URI参数错误。</translation>
+        <translation type="obsolete">URI无法解析！原因可能是黎曼币地址不正确，或者URI参数错误。</translation>
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
@@ -2524,7 +2524,7 @@ Address: %4
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
         <source>riecoin version</source>
-        <translation type="unfinished">比特币版本</translation>
+        <translation type="unfinished">黎曼币版本</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2685,7 +2685,7 @@ rpcpassword=%s
     <message>
         <location line="+3"/>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>错误：该交易被拒绝！发生这种错误的原因可能是：钱包中的比特币已经被用掉，有可能您复制了wallet.dat钱包文件，然后用复制的钱包文件支付了比特币，但是这个钱包文件中没有记录。</translation>
+        <translation>错误：该交易被拒绝！发生这种错误的原因可能是：钱包中的黎曼币已经被用掉，有可能您复制了wallet.dat钱包文件，然后用复制的钱包文件支付了黎曼币，但是这个钱包文件中没有记录。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2725,7 +2725,7 @@ rpcpassword=%s
     <message>
         <location line="+3"/>
         <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong riecoin will not work properly.</source>
-        <translation type="unfinished">警告：请检查电脑的日期时间设置是否正确！时间错误可能会导致比特币客户端运行异常。</translation>
+        <translation type="unfinished">警告：请检查电脑的日期时间设置是否正确！时间错误可能会导致黎曼币客户端运行异常。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2915,7 +2915,7 @@ rpcpassword=%s
     <message>
         <location line="+6"/>
         <source>Unable to bind to %s on this computer. riecoin is probably already running.</source>
-        <translation type="unfinished">无法在本机绑定 %s 端口 . 比特币客户端软件可能已经在运行.</translation>
+        <translation type="unfinished">无法在本机绑定 %s 端口 . 黎曼币客户端软件可能已经在运行.</translation>
     </message>
     <message>
         <location line="+47"/>
