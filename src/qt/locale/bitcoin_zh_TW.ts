@@ -7,11 +7,11 @@
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About riecoin</source>
-        <translation type="unfinished">關於位元幣</translation>
+        <translation type="unfinished">關於黎曼幣</translation>
     </message>
     <message>
         <source>&lt;b&gt;riecoin&lt;/b&gt; version</source>
-        <translation type="obsolete">&lt;b&gt;位元幣&lt;/b&gt;版本</translation>
+        <translation type="obsolete">&lt;b&gt;黎曼幣&lt;/b&gt;版本</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -41,7 +41,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <source>The riecoin developers</source>
-        <translation>位元幣開發人員</translation>
+        <translation>黎曼幣開發人員</translation>
     </message>
 </context>
 <context>
@@ -69,7 +69,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+25"/>
         <source>Sign a message to prove you own a riecoin address</source>
-        <translation type="unfinished">簽署訊息是用來證明位元幣位址是你的</translation>
+        <translation type="unfinished">簽署訊息是用來證明黎曼幣位址是你的</translation>
     </message>
     <message>
         <location line="-36"/>
@@ -79,7 +79,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
         <source>These are your riecoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation type="unfinished">這些是你用來收款的位元幣位址. 你可以提供不同的位址給不同的付款人, 來追蹤是誰支付給你.</translation>
+        <translation type="unfinished">這些是你用來收款的黎曼幣位址. 你可以提供不同的位址給不同的付款人, 來追蹤是誰支付給你.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -99,7 +99,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+11"/>
         <source>Verify a message to ensure it was signed with a specified riecoin address</source>
-        <translation type="unfinished">驗證訊息是用來確認訊息是用指定的位元幣位址簽署的</translation>
+        <translation type="unfinished">驗證訊息是用來確認訊息是用指定的黎曼幣位址簽署的</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -129,7 +129,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
         <source>These are your riecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">這是你用來付款的位元幣位址. 在付錢之前, 務必要檢查金額和收款位址是否正確.</translation>
+        <translation type="unfinished">這是你用來付款的黎曼幣位址. 在付錢之前, 務必要檢查金額和收款位址是否正確.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -255,7 +255,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RIECOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">警告: 如果將錢包加密後忘記密碼, 你會&lt;b&gt;失去其中所有的位元幣&lt;/b&gt;!</translation>
+        <translation type="unfinished">警告: 如果將錢包加密後忘記密碼, 你會&lt;b&gt;失去其中所有的黎曼幣&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -265,7 +265,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+11"/>
         <source>riecoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your riecoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">位元幣現在要關閉以完成加密程序. 請記住, 加密錢包無法完全防止入侵電腦的惡意程式偷取你的位元幣.</translation>
+        <translation type="unfinished">黎曼幣現在要關閉以完成加密程序. 請記住, 加密錢包無法完全防止入侵電腦的惡意程式偷取你的黎曼幣.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -331,13 +331,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
         <source>A fatal error occurred. riecoin can no longer continue safely and will quit.</source>
-        <translation type="unfinished">發生了致命的錯誤. 位元幣程式無法再繼續安全執行, 只好結束.</translation>
+        <translation type="unfinished">發生了致命的錯誤. 黎曼幣程式無法再繼續安全執行, 只好結束.</translation>
     </message>
     <message>
         <location filename="../bitcoingui.cpp" line="+70"/>
         <location line="+530"/>
         <source>riecoin</source>
-        <translation type="unfinished">位元幣</translation>
+        <translation type="unfinished">黎曼幣</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -362,7 +362,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Send coins to a riecoin address</source>
-        <translation type="unfinished">付錢到位元幣位址</translation>
+        <translation type="unfinished">付錢到黎曼幣位址</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -407,12 +407,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+3"/>
         <source>&amp;About riecoin</source>
-        <translation type="unfinished">關於位元幣</translation>
+        <translation type="unfinished">關於黎曼幣</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show information about riecoin</source>
-        <translation type="unfinished">顯示位元幣相關資訊</translation>
+        <translation type="unfinished">顯示黎曼幣相關資訊</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -432,7 +432,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Modify configuration options for riecoin</source>
-        <translation type="unfinished">修改位元幣的設定選項</translation>
+        <translation type="unfinished">修改黎曼幣的設定選項</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -482,7 +482,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Sign messages with your riecoin addresses to prove you own them</source>
-        <translation type="unfinished">用位元幣位址簽署訊息來證明那是你的</translation>
+        <translation type="unfinished">用黎曼幣位址簽署訊息來證明那是你的</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -492,7 +492,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Verify messages to ensure they were signed with specified riecoin addresses</source>
-        <translation type="unfinished">驗證訊息來確認是用指定的位元幣位址簽署的</translation>
+        <translation type="unfinished">驗證訊息來確認是用指定的黎曼幣位址簽署的</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -533,13 +533,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+47"/>
         <source>riecoin client</source>
-        <translation type="unfinished">位元幣客戶端軟體</translation>
+        <translation type="unfinished">黎曼幣客戶端軟體</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
         <source>%n active connection(s) to riecoin network</source>
         <translation type="unfinished">
-            <numerusform>與位元幣網路有 %n 個連線在使用中</numerusform>
+            <numerusform>與黎曼幣網路有 %n 個連線在使用中</numerusform>
         </translation>
     </message>
     <message>
@@ -675,7 +675,7 @@ Address: %4
         <location line="-23"/>
         <location line="+23"/>
         <source>URI can not be parsed! This can be caused by an invalid riecoin address or malformed URI parameters.</source>
-        <translation type="unfinished">無法解析 URI! 也許位元幣位址無效或 URI 參數有誤.</translation>
+        <translation type="unfinished">無法解析 URI! 也許黎曼幣位址無效或 URI 參數有誤.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -746,7 +746,7 @@ Address: %4
     <message>
         <location line="+71"/>
         <source>The entered address &quot;%1&quot; is not a valid riecoin address.</source>
-        <translation type="unfinished">輸入的位址 &quot;%1&quot; 並不是有效的位元幣位址.</translation>
+        <translation type="unfinished">輸入的位址 &quot;%1&quot; 並不是有效的黎曼幣位址.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -770,7 +770,7 @@ Address: %4
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
         <source>riecoin-Qt</source>
-        <translation type="unfinished">位元幣-Qt</translation>
+        <translation type="unfinished">黎曼幣-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -834,12 +834,12 @@ Address: %4
     <message>
         <location line="+31"/>
         <source>Automatically start riecoin after logging in to the system.</source>
-        <translation type="unfinished">在登入系統後自動啓動位元幣.</translation>
+        <translation type="unfinished">在登入系統後自動啓動黎曼幣.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Start riecoin on system login</source>
-        <translation type="unfinished">系統登入時啟動位元幣</translation>
+        <translation type="unfinished">系統登入時啟動黎曼幣</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -869,7 +869,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Connect to the riecoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation type="unfinished">透過 SOCKS 代理伺服器連線至位元幣網路 (比如說要透過 Tor 連線).</translation>
+        <translation type="unfinished">透過 SOCKS 代理伺服器連線至黎曼幣網路 (比如說要透過 Tor 連線).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -944,12 +944,12 @@ Address: %4
     <message>
         <location line="+13"/>
         <source>The user interface language can be set here. This setting will take effect after restarting riecoin.</source>
-        <translation type="unfinished">可以在這裡設定使用者介面的語言. 這個設定在位元幣程式重啓後才會生效.</translation>
+        <translation type="unfinished">可以在這裡設定使用者介面的語言. 這個設定在黎曼幣程式重啓後才會生效.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Whether to show riecoin addresses in the transaction list or not.</source>
-        <translation type="unfinished">是否要在交易列表中顯示位元幣位址.</translation>
+        <translation type="unfinished">是否要在交易列表中顯示黎曼幣位址.</translation>
     </message>
     <message>
         <location line="-22"/>
@@ -1011,7 +1011,7 @@ Address: %4
         <location line="-9"/>
         <location line="+9"/>
         <source>This setting will take effect after restarting riecoin.</source>
-        <translation type="unfinished">這個設定會在位元幣程式重啓後生效.</translation>
+        <translation type="unfinished">這個設定會在黎曼幣程式重啓後生效.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1030,7 +1030,7 @@ Address: %4
         <location line="+50"/>
         <location line="+166"/>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the riecoin network after a connection is established, but this process has not completed yet.</source>
-        <translation type="unfinished">顯示的資訊可能是過期的. 與位元幣網路的連線建立後, 你的錢包會自動和網路同步, 但這個步驟還沒完成.</translation>
+        <translation type="unfinished">顯示的資訊可能是過期的. 與黎曼幣網路的連線建立後, 你的錢包會自動和網路同步, 但這個步驟還沒完成.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1179,7 +1179,7 @@ Address: %4
     <message>
         <location line="-10"/>
         <source>riecoin - Debug window</source>
-        <translation type="unfinished">位元幣 - 除錯視窗</translation>
+        <translation type="unfinished">黎曼幣 - 除錯視窗</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -1234,7 +1234,7 @@ Address: %4
     <message>
         <location line="+49"/>
         <source>Open the riecoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation type="unfinished">從目前的資料目錄下開啓位元幣的除錯紀錄檔. 當紀錄檔很大時可能要花好幾秒的時間.</translation>
+        <translation type="unfinished">從目前的資料目錄下開啓黎曼幣的除錯紀錄檔. 當紀錄檔很大時可能要花好幾秒的時間.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1249,7 +1249,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Show the riecoin-Qt help message to get a list with possible riecoin command-line options.</source>
-        <translation type="unfinished">顯示位元幣-Qt的求助訊息, 來取得可用的命令列選項列表.</translation>
+        <translation type="unfinished">顯示黎曼幣-Qt的求助訊息, 來取得可用的命令列選項列表.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1268,7 +1268,7 @@ Address: %4
     </message>
     <message>
         <source>riecoin Core</source>
-        <translation type="obsolete">位元幣核心</translation>
+        <translation type="obsolete">黎曼幣核心</translation>
     </message>
     <message>
         <location line="+200"/>
@@ -1283,7 +1283,7 @@ Address: %4
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
         <source>Welcome to the riecoin RPC console.</source>
-        <translation type="unfinished">歡迎使用位元幣 RPC 主控台.</translation>
+        <translation type="unfinished">歡迎使用黎曼幣 RPC 主控台.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1429,8 +1429,8 @@ Address: %4
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>付款的目標位址 (比如說 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>The address to send the payment to (e.g. RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</source>
+        <translation>付款的目標位址 (比如說 RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1469,8 +1469,8 @@ Address: %4
         <translation>去掉這個收款人</translation>
     </message>
     <message>
-        <source>Enter a riecoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation type="obsolete">輸入位元幣位址 (比如說 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a riecoin address (e.g. RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</source>
+        <translation type="obsolete">輸入黎曼幣位址 (比如說 RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
@@ -1497,8 +1497,8 @@ Address: %4
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>用來簽署訊息的位址 (比如說 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>The address to sign the message with (e.g. RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</source>
+        <translation>用來簽署訊息的位址 (比如說 RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1540,12 +1540,12 @@ Address: %4
     <message>
         <location line="+21"/>
         <source>Sign the message to prove you own this riecoin address</source>
-        <translation type="unfinished">簽署訊息是用來證明這個位元幣位址是你的</translation>
+        <translation type="unfinished">簽署訊息是用來證明這個黎曼幣位址是你的</translation>
     </message>
     <message>
         <location line="+146"/>
         <source>Verify the message to ensure it was signed with the specified riecoin address</source>
-        <translation type="unfinished">驗證訊息是用來確認訊息是用指定的位元幣位址簽署的</translation>
+        <translation type="unfinished">驗證訊息是用來確認訊息是用指定的黎曼幣位址簽署的</translation>
     </message>
     <message>
         <location line="-143"/>
@@ -1575,8 +1575,8 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>簽署該訊息的位址 (比如說 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>The address the message was signed with (e.g. RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</source>
+        <translation>簽署該訊息的位址 (比如說 RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -1589,8 +1589,8 @@ Address: %4
         <translation>重置所有訊息驗證欄位</translation>
     </message>
     <message>
-        <source>Enter a riecoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation type="obsolete">輸入位元幣位址 (比如說 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a riecoin address (e.g. RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</source>
+        <translation type="obsolete">輸入黎曼幣位址 (比如說 RByJXMhtRa2Jc2ix6sWoVRZq3kyK3zb8nY)</translation>
     </message>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+28"/>
@@ -1600,7 +1600,7 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>Enter riecoin signature</source>
-        <translation type="unfinished">輸入位元幣簽章</translation>
+        <translation type="unfinished">輸入黎曼幣簽章</translation>
     </message>
     <message>
         <location line="-4"/>
@@ -1679,7 +1679,7 @@ Address: %4
     <name>SplashScreen</name>
     <message>
         <source>The riecoin developers</source>
-        <translation type="obsolete">位元幣開發人員</translation>
+        <translation type="obsolete">黎曼幣開發人員</translation>
     </message>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
@@ -2271,7 +2271,7 @@ Address: %4
     </message>
     <message>
         <source>Show information about riecoin</source>
-        <translation type="obsolete">顯示位元幣相關資訊</translation>
+        <translation type="obsolete">顯示黎曼幣相關資訊</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
@@ -2307,11 +2307,11 @@ Address: %4
     </message>
     <message>
         <source>Send coins to a riecoin address</source>
-        <translation type="obsolete">付錢到位元幣位址</translation>
+        <translation type="obsolete">付錢到黎曼幣位址</translation>
     </message>
     <message>
         <source>Modify configuration options for riecoin</source>
-        <translation type="obsolete">修改位元幣的設定選項</translation>
+        <translation type="obsolete">修改黎曼幣的設定選項</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -2335,7 +2335,7 @@ Address: %4
     </message>
     <message>
         <source>riecoin</source>
-        <translation type="obsolete">位元幣</translation>
+        <translation type="obsolete">黎曼幣</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2355,7 +2355,7 @@ Address: %4
     </message>
     <message>
         <source>&amp;About riecoin</source>
-        <translation type="obsolete">關於位元幣</translation>
+        <translation type="obsolete">關於黎曼幣</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -2371,11 +2371,11 @@ Address: %4
     </message>
     <message>
         <source>Sign messages with your riecoin addresses to prove you own them</source>
-        <translation type="obsolete">用位元幣位址簽署訊息來證明那是你的</translation>
+        <translation type="obsolete">用黎曼幣位址簽署訊息來證明那是你的</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified riecoin addresses</source>
-        <translation type="obsolete">驗證訊息來確認是用指定的位元幣位址簽署的</translation>
+        <translation type="obsolete">驗證訊息來確認是用指定的黎曼幣位址簽署的</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -2399,12 +2399,12 @@ Address: %4
     </message>
     <message>
         <source>riecoin client</source>
-        <translation type="obsolete">位元幣客戶端軟體</translation>
+        <translation type="obsolete">黎曼幣客戶端軟體</translation>
     </message>
     <message numerus="yes">
         <source>%n active connection(s) to riecoin network</source>
         <translation type="obsolete">
-            <numerusform>與位元幣網路有 %n 個連線在使用中</numerusform>
+            <numerusform>與黎曼幣網路有 %n 個連線在使用中</numerusform>
         </translation>
     </message>
     <message>
@@ -2502,7 +2502,7 @@ Address: %4
     </message>
     <message>
         <source>URI can not be parsed! This can be caused by an invalid riecoin address or malformed URI parameters.</source>
-        <translation type="obsolete">無法解析 URI! 也許位元幣位址無效或 URI 參數有誤.</translation>
+        <translation type="obsolete">無法解析 URI! 也許黎曼幣位址無效或 URI 參數有誤.</translation>
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
@@ -2514,7 +2514,7 @@ Address: %4
     </message>
     <message>
         <source>A fatal error occurred. riecoin can no longer continue safely and will quit.</source>
-        <translation type="obsolete">發生了致命的錯誤. 位元幣程式無法再繼續安全執行, 只好結束.</translation>
+        <translation type="obsolete">發生了致命的錯誤. 黎曼幣程式無法再繼續安全執行, 只好結束.</translation>
     </message>
 </context>
 <context>
@@ -2522,7 +2522,7 @@ Address: %4
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
         <source>riecoin version</source>
-        <translation type="unfinished">位元幣版本</translation>
+        <translation type="unfinished">黎曼幣版本</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2574,7 +2574,7 @@ Address: %4
     <message>
         <location line="-9"/>
         <source>Set database cache size in megabytes (default: 25)</source>
-        <translation>設定資料庫快取大小為多少百萬位元組(MB, 預設: 25)</translation>
+        <translation>設定資料庫快取大小為多少百萬黎曼組(MB, 預設: 25)</translation>
     </message>
     <message>
         <location line="-28"/>
@@ -2677,7 +2677,7 @@ alertnotify=echo %%s | mail -s &quot;riecoin Alert&quot; admin@foo.com
     <message>
         <location line="+3"/>
         <source>Cannot obtain a lock on data directory %s. riecoin is probably already running.</source>
-        <translation type="unfinished">無法鎖定資料目錄 %s. 也許位元幣已經在執行了.</translation>
+        <translation type="unfinished">無法鎖定資料目錄 %s. 也許黎曼幣已經在執行了.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2702,7 +2702,7 @@ alertnotify=echo %%s | mail -s &quot;riecoin Alert&quot; admin@foo.com
     <message>
         <location line="+11"/>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
-        <translation>設定高優先權或低手續費的交易資料大小上限為多少位元組 (預設: 27000)</translation>
+        <translation>設定高優先權或低手續費的交易資料大小上限為多少黎曼組 (預設: 27000)</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2722,7 +2722,7 @@ alertnotify=echo %%s | mail -s &quot;riecoin Alert&quot; admin@foo.com
     <message>
         <location line="+3"/>
         <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong riecoin will not work properly.</source>
-        <translation type="unfinished">警告: 請檢查電腦時間與日期是否正確! 位元幣無法在時鐘不準的情況下正常運作.</translation>
+        <translation type="unfinished">警告: 請檢查電腦時間與日期是否正確! 黎曼幣無法在時鐘不準的情況下正常運作.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2842,7 +2842,7 @@ alertnotify=echo %%s | mail -s &quot;riecoin Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Failed to write to coin database</source>
-        <translation>寫入位元幣資料庫失敗</translation>
+        <translation>寫入黎曼幣資料庫失敗</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2862,7 +2862,7 @@ alertnotify=echo %%s | mail -s &quot;riecoin Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Generate coins (default: 0)</source>
-        <translation>生產位元幣 (預設值: 0)</translation>
+        <translation>生產黎曼幣 (預設值: 0)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2912,7 +2912,7 @@ alertnotify=echo %%s | mail -s &quot;riecoin Alert&quot; admin@foo.com
     <message>
         <location line="+6"/>
         <source>Unable to bind to %s on this computer. riecoin is probably already running.</source>
-        <translation type="unfinished">無法和這台電腦上的 %s 繫結. 也許位元幣已經在執行了.</translation>
+        <translation type="unfinished">無法和這台電腦上的 %s 繫結. 也許黎曼幣已經在執行了.</translation>
     </message>
     <message>
         <location line="+47"/>
@@ -2947,12 +2947,12 @@ alertnotify=echo %%s | mail -s &quot;riecoin Alert&quot; admin@foo.com
     <message>
         <location line="+2"/>
         <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
-        <translation>每個連線的接收緩衝區大小上限為 &lt;n&gt;*1000 個位元組 (預設: 5000)</translation>
+        <translation>每個連線的接收緩衝區大小上限為 &lt;n&gt;*1000 個黎曼組 (預設: 5000)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)</source>
-        <translation>每個連線的傳送緩衝區大小上限為 &lt;n&gt;*1000 位元組 (預設: 1000)</translation>
+        <translation>每個連線的傳送緩衝區大小上限為 &lt;n&gt;*1000 黎曼組 (預設: 1000)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3002,12 +3002,12 @@ alertnotify=echo %%s | mail -s &quot;riecoin Alert&quot; admin@foo.com
     <message>
         <location line="+5"/>
         <source>Set maximum block size in bytes (default: 250000)</source>
-        <translation>設定區塊大小上限為多少位元組 (預設: 250000)</translation>
+        <translation>設定區塊大小上限為多少黎曼組 (預設: 250000)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Set minimum block size in bytes (default: 0)</source>
-        <translation>設定區塊大小下限為多少位元組 (預設: 0)</translation>
+        <translation>設定區塊大小下限為多少黎曼組 (預設: 0)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3042,7 +3042,7 @@ alertnotify=echo %%s | mail -s &quot;riecoin Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Transaction too large</source>
-        <translation>交易位元量太大</translation>
+        <translation>交易黎曼量太大</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3067,7 +3067,7 @@ alertnotify=echo %%s | mail -s &quot;riecoin Alert&quot; admin@foo.com
     <message>
         <location line="+3"/>
         <source>Wallet needed to be rewritten: restart riecoin to complete</source>
-        <translation type="unfinished">錢包需要重寫: 請重啟位元幣來完成</translation>
+        <translation type="unfinished">錢包需要重寫: 請重啟黎曼幣來完成</translation>
     </message>
     <message>
         <location line="+1"/>
