@@ -39,6 +39,7 @@ int nBestHeight = -1;
 CBigNum bnBestChainWork = 0;
 CBigNum bnBestInvalidWork = 0;
 uint256 hashBestChain = 0;
+CBigNum bnBestChainLastDiff = iMinPrimeSize;
 CBlockIndex* pindexBest = NULL;
 set<CBlockIndex*, CBlockIndexWorkComparator> setBlockIndexValid; // may contain all CBlockIndex*'s that have validness >=BLOCK_VALID_TRANSACTIONS, and must contain those who aren't failed
 int64 nTimeBestReceived = 0;
@@ -1237,7 +1238,11 @@ unsigned int generatePrimeBase( CBigNum &bnTarget, uint256 hash, bitsType compac
     {
         nBits = (unsigned int)-1; // saturate diff at (2**32) - 1, this should be enough for some years ;)
     }
-    unsigned int trailingZeros = nBits.getuint() - 1 - zeroesBeforeHashInPrime - 256;
+    const unsigned int significativeDigits =  1 + zeroesBeforeHashInPrime + 256;
+    unsigned int trailingZeros = nBits.getuint();
+    if( trailingZeros < significativeDigits )
+        return 0;
+    trailingZeros -= significativeDigits;
     bnTarget <<= trailingZeros;
     return trailingZeros;
 }
@@ -1265,59 +1270,59 @@ bool CheckProofOfWork(uint256 hash, bitsType compactBits, uint256 delta)
         return error("CheckProofOfWork() : not valid pow");
 
     // first we do a single test to quickly discard most of the bogus cases
-    if( BN_is_prime_fasttest( &bnTarget, 2, NULL, NULL, NULL, 1) != 1 )
+    if( BN_is_prime_fasttest( &bnTarget, 1, NULL, NULL, NULL, 1) != 1 )
     {
         //printf("CheckProofOfWork fail  hash: %s  \ntarget: %d nOffset: %s\n", hash2.GetHex().c_str(), nBits, delta.GetHex().c_str());
         //printf("CheckProofOfWork fail  target: %s  \n", bnTarget.GetHex().c_str());
         return error("CheckProofOfWork() : n not prime");
     }
     bnTarget += 4;
-    if( BN_is_prime_fasttest( &bnTarget, 2, NULL, NULL, NULL, 1) != 1 )
+    if( BN_is_prime_fasttest( &bnTarget, 1, NULL, NULL, NULL, 1) != 1 )
     {
         return error("CheckProofOfWork() : n+4 not prime");
     }
     bnTarget += 2;
-    if( BN_is_prime_fasttest( &bnTarget, 2, NULL, NULL, NULL, 1) != 1 )
+    if( BN_is_prime_fasttest( &bnTarget, 1, NULL, NULL, NULL, 1) != 1 )
     {
         return error("CheckProofOfWork() : n+6 not prime");
     }
     bnTarget += 4;
-    if( BN_is_prime_fasttest( &bnTarget, 2, NULL, NULL, NULL, 1) != 1 )
+    if( BN_is_prime_fasttest( &bnTarget, 1, NULL, NULL, NULL, 1) != 1 )
     {
         return error("CheckProofOfWork() : n+10 not prime");
     }
     bnTarget += 2;
-    if( BN_is_prime_fasttest( &bnTarget, 2, NULL, NULL, NULL, 1) != 1 )
+    if( BN_is_prime_fasttest( &bnTarget, 1, NULL, NULL, NULL, 1) != 1 )
     {
         return error("CheckProofOfWork() : n+12 not prime");
     }
     bnTarget += 4;
-    if( BN_is_prime_fasttest( &bnTarget, 16, NULL, NULL, NULL, 1) != 1 )
+    if( BN_is_prime_fasttest( &bnTarget, 10, NULL, NULL, NULL, 1) != 1 )
     {
         return error("CheckProofOfWork() : n+16 not prime");
     }
     bnTarget -= 4;
-    if( BN_is_prime_fasttest( &bnTarget, 14, NULL, NULL, NULL, 1) != 1 )
+    if( BN_is_prime_fasttest( &bnTarget, 9, NULL, NULL, NULL, 0) != 1 )
     {
         return error("CheckProofOfWork() : n+12 not prime");
     }
     bnTarget -= 2;
-    if( BN_is_prime_fasttest( &bnTarget, 14, NULL, NULL, NULL, 1) != 1 )
+    if( BN_is_prime_fasttest( &bnTarget, 9, NULL, NULL, NULL, 0) != 1 )
     {
         return error("CheckProofOfWork() : n+10 not prime");
     }
     bnTarget -= 4;
-    if( BN_is_prime_fasttest( &bnTarget, 14, NULL, NULL, NULL, 1) != 1 )
+    if( BN_is_prime_fasttest( &bnTarget, 9, NULL, NULL, NULL, 0) != 1 )
     {
         return error("CheckProofOfWork() : n+6 not prime");
     }
     bnTarget -= 2;
-    if( BN_is_prime_fasttest( &bnTarget, 14, NULL, NULL, NULL, 1) != 1 )
+    if( BN_is_prime_fasttest( &bnTarget, 9, NULL, NULL, NULL, 0) != 1 )
     {
         return error("CheckProofOfWork() : n+4 not prime");
     }
     bnTarget -= 4;
-    if( BN_is_prime_fasttest( &bnTarget, 14, NULL, NULL, NULL, 1) != 1 )
+    if( BN_is_prime_fasttest( &bnTarget, 9, NULL, NULL, NULL, 0) != 1 )
     {
         return error("CheckProofOfWork() : n not prime");
     }
@@ -2023,6 +2028,7 @@ bool SetBestChain(CValidationState &state, CBlockIndex* pindexNew)
 
     // New best block
     hashBestChain = pindexNew->GetBlockHash();
+    bnBestChainLastDiff.SetCompact(pindexNew->nBits);
     pindexBest = pindexNew;
     pblockindexFBBHLast = NULL;
     nBestHeight = pindexBest->nHeight;
@@ -2366,11 +2372,44 @@ bool ProcessBlock(CValidationState &state, CNode* pfrom, CBlock* pblock, CDiskBl
     if (mapOrphanBlocks.count(hash))
         return state.Invalid(error("ProcessBlock() : already have block (orphan) %s", hash.ToString().c_str()));
 
+    CBigNum bnNewBlock;
+    bnNewBlock.SetCompact(pblock->nBits);
+
+    CBlockIndex* pcheckpoint = Checkpoints::GetLastCheckpoint(mapBlockIndex);
+
+    // if it's too difficult, we don't want it. This avoids flooding attacks and limits memory allocated for primeBase used for PoW calculation
+    if( pblock->hashPrevBlock == hashBestChain )
+    {
+        if( bnNewBlock > bnBestChainLastDiff * 2 )
+        {
+            return state.DoS(100, error("ProcessBlock() : block with too much proof-of-work"));
+        }
+    }
+    else
+    {
+        CBigNum bnLastDiff;
+        if( pcheckpoint )
+        {
+            bnLastDiff.SetCompact(pcheckpoint->nBits);
+        }
+        else
+        {
+            bnLastDiff = iMinPrimeSize;
+        }
+        if( bnBestChainLastDiff > bnLastDiff )
+        {
+            bnLastDiff = bnBestChainLastDiff;
+        }
+        if( bnNewBlock > (bnBestChainLastDiff << 10) )
+        {
+            return error("ProcessBlock() : block with too much proof-of-work");
+        }
+    }
+
     // Preliminary checks
     if (!pblock->CheckBlock(state))
         return error("ProcessBlock() : CheckBlock FAILED");
 
-    CBlockIndex* pcheckpoint = Checkpoints::GetLastCheckpoint(mapBlockIndex);
     if (pcheckpoint && pblock->hashPrevBlock != hashBestChain)
     {
         // Extra checks to prevent "fill up memory by spamming with bogus blocks"
@@ -2379,8 +2418,6 @@ bool ProcessBlock(CValidationState &state, CNode* pfrom, CBlock* pblock, CDiskBl
         {
             return state.DoS(100, error("ProcessBlock() : block with timestamp before last checkpoint"));
         }
-        CBigNum bnNewBlock;
-        bnNewBlock.SetCompact(pblock->nBits);
         CBigNum bnRequired;
         bnRequired.SetCompact(ComputeMinWork(pcheckpoint->nBits, deltaTime));
         if (bnNewBlock < bnRequired)
@@ -2719,6 +2756,7 @@ bool static LoadBlockIndexDB()
     if (pindexBest == NULL)
         return true;
     hashBestChain = pindexBest->GetBlockHash();
+    bnBestChainLastDiff.SetCompact(pindexBest->nBits);
     nBestHeight = pindexBest->nHeight;
     bnBestChainWork = pindexBest->bnChainWork;
 
@@ -2817,6 +2855,7 @@ void UnloadBlockIndex()
     pindexGenesisBlock = NULL;
     nBestHeight = 0;
     bnBestChainWork = 0;
+    bnBestChainLastDiff = iMinPrimeSize;
     bnBestInvalidWork = 0;
     hashBestChain = 0;
     pindexBest = NULL;
@@ -4655,6 +4694,15 @@ void FormatHashBuffers(CBlock* pblock, char* pdata)
 bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
 {
     uint256 hash = pblock->GetHashForPoW();
+
+    CBigNum bnNewBlock;
+    bnNewBlock.SetCompact(pblock->nBits);
+
+    if( bnNewBlock * 3 > bnBestChainLastDiff )
+    {
+        // if it's too difficult, we don't want it. This limits memory allocated for primeBase used for PoW calculation
+        return error("CheckWork() : block with too much proof-of-work");
+    }
 
     if (!CheckProofOfWork( hash, pblock->nBits, pblock->nOffset))
         return false;

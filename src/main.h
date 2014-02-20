@@ -1479,8 +1479,8 @@ public:
         }
 
         // Check the header
-        if (!CheckProofOfWork(GetHashForPoW(), nBits, nOffset))
-            return error("CBlock::ReadFromDisk() : errors in block header");
+        //if (!CheckProofOfWork(GetHashForPoW(), nBits, nOffset))     we can trust out disk
+          //  return error("CBlock::ReadFromDisk() : errors in block header");
 
         return true;
     }

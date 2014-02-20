@@ -13,8 +13,6 @@ void ScriptPubKeyToJSON(const CScript& scriptPubKey, Object& out);
 
 double GetDifficulty(const CBlockIndex* blockindex)
 {
-    // Floating point number that is a multiple of the minimum difficulty,
-    // minimum difficulty = 1.0.
     if (blockindex == NULL)
     {
         if (pindexBest == NULL)
@@ -37,7 +35,7 @@ double GetDifficulty(const CBlockIndex* blockindex)
         nShift++;
     }
 
-    return dDiff / iMinPrimeSize;
+    return dDiff;
 }
 
 
@@ -59,7 +57,7 @@ Object blockToJSON(const CBlock& block, const CBlockIndex* blockindex)
     result.push_back(Pair("time", (boost::int64_t)block.GetBlockTime()));
     result.push_back(Pair("nOffset",block.nOffset.GetHex()));
     result.push_back(Pair("bits", HexBits(block.nBits)));
-    result.push_back(Pair("difficulty", (int)GetDifficulty(blockindex)));
+    result.push_back(Pair("difficulty", GetDifficulty(blockindex)));
 
     if (blockindex->pprev)
         result.push_back(Pair("previousblockhash", blockindex->pprev->GetBlockHash().GetHex()));
@@ -87,7 +85,7 @@ Value getdifficulty(const Array& params, bool fHelp)
             "getdifficulty\n"
             "Returns the proof-of-work difficulty as a multiple of the minimum difficulty.");
 
-    return (int)GetDifficulty();
+    return GetDifficulty();
 }
 
 

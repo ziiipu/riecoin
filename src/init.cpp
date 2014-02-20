@@ -362,6 +362,7 @@ std::string HelpMessage()
         "  -loadblock=<file>      " + _("Imports blocks from external blk000??.dat file") + "\n" +
         "  -reindex               " + _("Rebuild block chain index from current blk000??.dat files") + "\n" +
         "  -par=<n>               " + _("Set the number of script verification threads (up to 16, 0 = auto, <0 = leave that many cores free, default: 0)") + "\n" +
+        "  -spendzeroconfchange   " + _("Spend unconfirmed change when sending transactions (default: 1)") + "\n" +
 
         "\n" + _("Block creation options:") + "\n" +
         "  -blockminsize=<n>      "   + _("Set minimum block size in bytes (default: 0)") + "\n" +
@@ -616,6 +617,8 @@ bool AppInit2(boost::thread_group& threadGroup)
         if (nTransactionFee > 0.25 * COIN)
             InitWarning(_("Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction."));
     }
+
+    bSpendZeroConfChange = GetArg("-spendzeroconfchange", true);
 
     // ********************************************************* Step 4: application initialization: dir lock, daemonize, pidfile, debug log
 
