@@ -210,6 +210,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
             "  \"sigoplimit\" : limit of sigops in blocks\n"
             "  \"sizelimit\" : limit of block size\n"
             "  \"diff\" : size of prime in bits (difficulty)\n"
+            "  \"bits\" : compressed difficulty of next block\n"
             "  \"height\" : height of the next block\n"
             "  \"primes\" : number of primes required (constellation size)\n"
             "See https://en.bitcoin.it/wiki/BIP_0022 for specification. riecoin is similar");
@@ -333,6 +334,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
     result.push_back(Pair("sizelimit", (int64_t)MAX_BLOCK_SIZE));
     result.push_back(Pair("curtime", (int64_t)pblock->nTime));
     result.push_back(Pair("diff",  diff.ToString()));
+    result.push_back(Pair("bits", HexBits(pblock->nBits)));
     result.push_back(Pair("height", (int64_t)(pindexPrev->nHeight+1)));
     result.push_back(Pair("primes", constellationSize));
 

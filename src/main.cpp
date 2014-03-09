@@ -4698,7 +4698,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     CBigNum bnNewBlock;
     bnNewBlock.SetCompact(pblock->nBits);
 
-    if( bnNewBlock * 3 > bnBestChainLastDiff )
+    if( bnNewBlock > bnBestChainLastDiff * 3)
     {
         // if it's too difficult, we don't want it. This limits memory allocated for primeBase used for PoW calculation
         return error("CheckWork() : block with too much proof-of-work");
