@@ -1296,8 +1296,8 @@ public:
         nVersion = this->nVersion;
         READWRITE(hashPrevBlock);
         READWRITE(hashMerkleRoot);
-        READWRITE(nBits);
         READWRITE(nTime);
+        READWRITE(nBits);
         READWRITE(nOffset);
     )
 
