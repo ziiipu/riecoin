@@ -1260,7 +1260,7 @@ bool CheckProofOfWork(uint256 hash, bitsType compactBits, uint256 delta)
         uint256 deltaLimit = 1;
         deltaLimit <<= trailingZeros;
         if( delta >= deltaLimit )
-            return error("CheckProofOfWork() : candidate larger than allowed");
+            return error("CheckProofOfWork() : candidate larger than allowed %s of %s", delta.ToString().c_str(), deltaLimit.ToString().c_str() );
     }
 
     CBigNum bigDelta = CBigNum(delta);
@@ -2780,7 +2780,7 @@ bool VerifyDB() {
 
     // Verify blocks in the best chain
     int nCheckLevel = GetArg("-checklevel", 3);
-    int nCheckDepth = GetArg( "-checkblocks", 288);
+    int nCheckDepth = GetArg( "-checkblocks", 9);
     if (nCheckDepth == 0)
         nCheckDepth = 1000000000; // suffices until the year 19000
     if (nCheckDepth > nBestHeight)
