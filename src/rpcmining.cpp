@@ -351,6 +351,13 @@ Value submitblock(const Array& params, bool fHelp)
             "See https://en.bitcoin.it/wiki/BIP_0022 for specification. riecoin is similar");
 
     vector<unsigned char> blockData(ParseHex(params[0].get_str()));
+
+    if (blockData.size() < 80)
+        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter");
+    int32_t bitsAux = *(int32_t *)&blockData[68];
+    memcpy( &blockData[68], &blockData[72], 8 );
+    *(int32_t *)&blockData[76] = bitsAux;
+
     CDataStream ssBlock(blockData, SER_NETWORK, PROTOCOL_VERSION);
     CBlock pblock;
     try {
