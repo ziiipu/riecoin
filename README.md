@@ -3,9 +3,9 @@ Riecoin Core integration/staging tree
 
 http://www.riecoin.org
 
-Copyright (c) 2009-2014 Bitcoin Core Developers
+Copyright (c) 2009-2016 Bitcoin Core Developers
 
-Copyright (c) 2013-2014 Riecoin Developers
+Copyright (c) 2013-2016 Riecoin Developers
 
 What is riecoin?
 ----------------
