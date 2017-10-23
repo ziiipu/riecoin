@@ -1422,7 +1422,7 @@ void ThreadOpenAddedConnections()
             OpenNetworkConnection(CAddress(vserv[i % vserv.size()]), &grant);
             MilliSleep(500);
         }
-        MilliSleep(120000); // Retry every 2 minutes
+        MilliSleep(500); // Retry every 5 seconds
     }
 }
 
